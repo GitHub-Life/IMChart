@@ -6,7 +6,6 @@ target 'IMChartDemo' do
     use_frameworks!
 
     pod 'ReactiveCocoa', '2.5'
-    pod 'AFNetworking'
     pod 'Masonry'
     pod 'Reveal-SDK', :configurations => ['Debug']
 

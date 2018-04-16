@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import <AFNetworking/AFNetworking.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "IMChart.h"
 #import "IMChartData+Parse.h"
@@ -15,8 +14,6 @@
 #define ChartViewWidth ([UIScreen mainScreen].bounds.size.width - 58)
 
 @interface ViewController ()
-    
-@property (nonatomic, copy) NSString *coinId;
     
 @property (nonatomic, strong) NSArray<UIColor *> *chartColors;
 
@@ -65,10 +62,9 @@
 }
     
 - (void)initView {
-    _coinId = @"bitcoin";
-    
     _timeChooseStrs = @[@"1d", @"7d", @"1m", @"3m", @"1y", @"ytd", @"all"];
-    _chooseView.itemTitles = @[@"天", @"周", @"1月", @"3月", @"1年", @"今年", @"所有"];
+//    _chooseView.itemTitles = @[@"天", @"周", @"1月", @"3月", @"1年", @"今年", @"所有"];
+    _chooseView.itemTitles = _timeChooseStrs;
     [_chooseView setNormalFont:[UIFont systemFontOfSize:14]];
     [_chooseView setNormalColor:[UIColor blackColor]];
     [_chooseView setSelectedFont:[UIFont systemFontOfSize:14 weight:UIFontWeightBold]];
@@ -87,11 +83,11 @@
     
     [_lineChartRightTipView setFont:[UIFont systemFontOfSize:12]];
     [_lineChartRightTipView setTextColors:[self.chartColors subarrayWithRange:NSMakeRange(0, 3)]];
-    [_lineChartRightTipView setTexts:@[@"市值", @"价格(USD)", @"价格(BTC)"]];
+    [_lineChartRightTipView setTexts:@[@"Value1", @"Value2", @"Value3"]];
     
     [_columnChartRightTipView setFont:[UIFont systemFontOfSize:12]];
     [_columnChartRightTipView setTextColors:@[self.chartColors.lastObject]];
-    [_columnChartRightTipView setTexts:@[@"24H成交额"]];
+    [_columnChartRightTipView setTexts:@[@"Value4"]];
     
     _timeLineView.width = ChartViewWidth;
     _timeLineDateFormats = @[@"HH:mm", @"MM-dd", @"MM-dd", @"MM-dd", @"yyyy-MM", @"MM-dd", @"yyyy-MM"];
@@ -114,12 +110,7 @@
     [RACObserve(_chooseView, selectedIndex) subscribeNext:^(id x) {
         @strongify(self);
         [self.timeLineView setDateFormat:self.timeLineDateFormats[[x integerValue]]];
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        params[@"coin_id"] = self.coinId;
-        if ([x integerValue] < self.timeChooseStrs.count) {
-            params[@"type"] = self.timeChooseStrs[[x integerValue]];
-        }
-        [self getDataWithParams:params];
+        [self getDataWithParams:self.timeChooseStrs[[x integerValue]]];
     }];
     [RACObserve(self.lineChartView, timeStamps) subscribeNext:^(id x) {
         @strongify(self);
@@ -127,18 +118,20 @@
     }];
 }
     
-- (void)getDataWithParams:(NSDictionary *)params {
+- (void)getDataWithParams:(NSString *)params {
     @weakify(self);
-    [[AFHTTPSessionManager manager] GET:@"https://market.niuyan.com/api/v2/web/coin/chart" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * responseDict) {
-        @strongify(self);
-        if ([responseDict[@"code"] intValue] == 0) {
-            self.dataGroup.dataArray = [IMChartData dataArrayWithResponseDatas:responseDict[@"data"][@"data"]];
+    dispatch_async(dispatch_queue_create(nil, nil), ^{
+        NSError *error;
+        NSString *jsonFilePath = [[NSBundle mainBundle] pathForResource:params ofType:@"json"];
+        NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:jsonFilePath] options:NSJSONReadingMutableContainers error:&error];
+        if (!error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.dataGroup.dataArray = [IMChartData dataArrayWithResponseDatas:jsonArray];
+            });
         } else {
-            NSLog(@" - 数据请求错误 - ");
+            NSLog(@"error = %@", error.description);
         }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"error = %@", error.description);
-    }];
+    });
 }
 
 - (IBAction)showStateBtnsClick:(UIButton *)sender {

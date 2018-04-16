@@ -7,66 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B76B6BAE2081F0070049F8A2 /* UIView+Rect.m in Sources */ = {isa = PBXBuildFile; fileRef = B76B6BAD2081F0070049F8A2 /* UIView+Rect.m */; };
-		B7A5BC76208437120033D998 /* IMChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC59208437120033D998 /* IMChartData.m */; };
-		B7A5BC77208437120033D998 /* IMChartDataGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC5A208437120033D998 /* IMChartDataGroup.m */; };
-		B7A5BC78208437120033D998 /* IMChartRightTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC60208437120033D998 /* IMChartRightTipView.m */; };
-		B7A5BC79208437120033D998 /* IMSmoothedLineChartPainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC65208437120033D998 /* IMSmoothedLineChartPainer.m */; };
-		B7A5BC7A208437120033D998 /* IMLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC66208437120033D998 /* IMLineChartView.m */; };
-		B7A5BC7B208437120033D998 /* IMChartScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC69208437120033D998 /* IMChartScrollView.m */; };
-		B7A5BC7C208437120033D998 /* IMColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC6B208437120033D998 /* IMColumnChartView.m */; };
-		B7A5BC7D208437120033D998 /* IMColumnChartPainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC6E208437120033D998 /* IMColumnChartPainer.m */; };
-		B7A5BC7E208437120033D998 /* IMChartTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC72208437120033D998 /* IMChartTimeLineView.m */; };
-		B7A5BC7F208437120033D998 /* IMChartChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC75208437120033D998 /* IMChartChooseView.m */; };
-		B7F7AA38206647C800315052 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F7AA37206647C800315052 /* AppDelegate.m */; };
-		B7F7AA3B206647C800315052 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F7AA3A206647C800315052 /* ViewController.m */; };
-		B7F7AA3E206647C800315052 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F7AA3C206647C800315052 /* Main.storyboard */; };
-		B7F7AA40206647C800315052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F7AA3F206647C800315052 /* Assets.xcassets */; };
-		B7F7AA43206647C800315052 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F7AA41206647C800315052 /* LaunchScreen.storyboard */; };
-		B7F7AA46206647C800315052 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F7AA45206647C800315052 /* main.m */; };
-		B7F7AA6020664A4900315052 /* IMChartData+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F7AA5F20664A4900315052 /* IMChartData+Parse.m */; };
-		DF356F10146EC03A0959A72C /* Pods_IMChartDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7386948BD882C9C20EED044 /* Pods_IMChartDemo.framework */; };
+		B7A5BD4020846F390033D998 /* UIView+Rect.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD2920846F390033D998 /* UIView+Rect.m */; };
+		B7A5BD4120846F390033D998 /* IMChartData+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD2C20846F390033D998 /* IMChartData+Parse.m */; };
+		B7A5BD4220846F390033D998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD2E20846F390033D998 /* Assets.xcassets */; };
+		B7A5BD4320846F390033D998 /* 3m.json in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3020846F390033D998 /* 3m.json */; };
+		B7A5BD4420846F390033D998 /* 1m.json in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3120846F390033D998 /* 1m.json */; };
+		B7A5BD4520846F390033D998 /* 1y.json in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3220846F390033D998 /* 1y.json */; };
+		B7A5BD4620846F390033D998 /* ytd.json in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3320846F390033D998 /* ytd.json */; };
+		B7A5BD4720846F390033D998 /* 7d.json in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3420846F390033D998 /* 7d.json */; };
+		B7A5BD4820846F390033D998 /* 1d.json in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3520846F390033D998 /* 1d.json */; };
+		B7A5BD4920846F390033D998 /* all.json in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3620846F390033D998 /* all.json */; };
+		B7A5BD4A20846F390033D998 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3720846F390033D998 /* LaunchScreen.storyboard */; };
+		B7A5BD4B20846F390033D998 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD3920846F390033D998 /* ViewController.m */; };
+		B7A5BD4C20846F390033D998 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3A20846F390033D998 /* Main.storyboard */; };
+		B7A5BD4D20846F390033D998 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD3C20846F390033D998 /* main.m */; };
+		B7A5BD4E20846F390033D998 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD3D20846F390033D998 /* AppDelegate.m */; };
+		B7A5BD4F20846F390033D998 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3E20846F390033D998 /* Info.plist */; };
+		B7A5BD7020846F440033D998 /* IMChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD5320846F430033D998 /* IMChartData.m */; };
+		B7A5BD7120846F440033D998 /* IMChartDataGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD5420846F430033D998 /* IMChartDataGroup.m */; };
+		B7A5BD7220846F440033D998 /* IMChartRightTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD5A20846F430033D998 /* IMChartRightTipView.m */; };
+		B7A5BD7320846F440033D998 /* IMSmoothedLineChartPainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD5F20846F430033D998 /* IMSmoothedLineChartPainer.m */; };
+		B7A5BD7420846F440033D998 /* IMLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD6020846F430033D998 /* IMLineChartView.m */; };
+		B7A5BD7520846F440033D998 /* IMChartScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD6320846F430033D998 /* IMChartScrollView.m */; };
+		B7A5BD7620846F440033D998 /* IMColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD6520846F430033D998 /* IMColumnChartView.m */; };
+		B7A5BD7720846F440033D998 /* IMColumnChartPainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD6820846F430033D998 /* IMColumnChartPainer.m */; };
+		B7A5BD7820846F440033D998 /* IMChartTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD6C20846F430033D998 /* IMChartTimeLineView.m */; };
+		B7A5BD7920846F440033D998 /* IMChartChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD6F20846F430033D998 /* IMChartChooseView.m */; };
+		CBF6101F0C98ACD3372923BB /* Pods_IMChartDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8182CEF7DAE0360C2D67E3 /* Pods_IMChartDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1383C607B15683410F540827 /* Pods-IMChartDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChartDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMChartDemo/Pods-IMChartDemo.release.xcconfig"; sourceTree = "<group>"; };
 		3D77293E09D0E5EB754035BB /* Pods-IMChartDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChartDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMChartDemo/Pods-IMChartDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		B7386948BD882C9C20EED044 /* Pods_IMChartDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMChartDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B76B6BAC2081F0070049F8A2 /* UIView+Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Rect.h"; sourceTree = "<group>"; };
-		B76B6BAD2081F0070049F8A2 /* UIView+Rect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Rect.m"; sourceTree = "<group>"; };
-		B7A5BC57208437120033D998 /* IMChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChart.h; sourceTree = "<group>"; };
-		B7A5BC59208437120033D998 /* IMChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartData.m; sourceTree = "<group>"; };
-		B7A5BC5A208437120033D998 /* IMChartDataGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartDataGroup.m; sourceTree = "<group>"; };
-		B7A5BC5B208437120033D998 /* IMChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartData.h; sourceTree = "<group>"; };
-		B7A5BC5C208437120033D998 /* IMChartDataGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartDataGroup.h; sourceTree = "<group>"; };
-		B7A5BC5F208437120033D998 /* IMChartRightTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartRightTipView.h; sourceTree = "<group>"; };
-		B7A5BC60208437120033D998 /* IMChartRightTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartRightTipView.m; sourceTree = "<group>"; };
-		B7A5BC62208437120033D998 /* IMLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMLineChartView.h; sourceTree = "<group>"; };
-		B7A5BC64208437120033D998 /* IMSmoothedLineChartPainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSmoothedLineChartPainer.h; sourceTree = "<group>"; };
-		B7A5BC65208437120033D998 /* IMSmoothedLineChartPainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSmoothedLineChartPainer.m; sourceTree = "<group>"; };
-		B7A5BC66208437120033D998 /* IMLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMLineChartView.m; sourceTree = "<group>"; };
-		B7A5BC68208437120033D998 /* IMChartScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartScrollView.h; sourceTree = "<group>"; };
-		B7A5BC69208437120033D998 /* IMChartScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartScrollView.m; sourceTree = "<group>"; };
-		B7A5BC6B208437120033D998 /* IMColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMColumnChartView.m; sourceTree = "<group>"; };
-		B7A5BC6D208437120033D998 /* IMColumnChartPainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMColumnChartPainer.h; sourceTree = "<group>"; };
-		B7A5BC6E208437120033D998 /* IMColumnChartPainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMColumnChartPainer.m; sourceTree = "<group>"; };
-		B7A5BC6F208437120033D998 /* IMColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMColumnChartView.h; sourceTree = "<group>"; };
-		B7A5BC71208437120033D998 /* IMChartTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartTimeLineView.h; sourceTree = "<group>"; };
-		B7A5BC72208437120033D998 /* IMChartTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartTimeLineView.m; sourceTree = "<group>"; };
-		B7A5BC74208437120033D998 /* IMChartChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartChooseView.h; sourceTree = "<group>"; };
-		B7A5BC75208437120033D998 /* IMChartChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartChooseView.m; sourceTree = "<group>"; };
+		5B8182CEF7DAE0360C2D67E3 /* Pods_IMChartDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMChartDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A5BD2720846F390033D998 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B7A5BD2920846F390033D998 /* UIView+Rect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Rect.m"; sourceTree = "<group>"; };
+		B7A5BD2A20846F390033D998 /* IMChartData+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IMChartData+Parse.h"; sourceTree = "<group>"; };
+		B7A5BD2B20846F390033D998 /* UIView+Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Rect.h"; sourceTree = "<group>"; };
+		B7A5BD2C20846F390033D998 /* IMChartData+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IMChartData+Parse.m"; sourceTree = "<group>"; };
+		B7A5BD2E20846F390033D998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7A5BD3020846F390033D998 /* 3m.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 3m.json; sourceTree = "<group>"; };
+		B7A5BD3120846F390033D998 /* 1m.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1m.json; sourceTree = "<group>"; };
+		B7A5BD3220846F390033D998 /* 1y.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1y.json; sourceTree = "<group>"; };
+		B7A5BD3320846F390033D998 /* ytd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ytd.json; sourceTree = "<group>"; };
+		B7A5BD3420846F390033D998 /* 7d.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 7d.json; sourceTree = "<group>"; };
+		B7A5BD3520846F390033D998 /* 1d.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1d.json; sourceTree = "<group>"; };
+		B7A5BD3620846F390033D998 /* all.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all.json; sourceTree = "<group>"; };
+		B7A5BD3820846F390033D998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7A5BD3920846F390033D998 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B7A5BD3B20846F390033D998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7A5BD3C20846F390033D998 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B7A5BD3D20846F390033D998 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B7A5BD3E20846F390033D998 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7A5BD3F20846F390033D998 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B7A5BD5120846F430033D998 /* IMChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChart.h; sourceTree = "<group>"; };
+		B7A5BD5320846F430033D998 /* IMChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartData.m; sourceTree = "<group>"; };
+		B7A5BD5420846F430033D998 /* IMChartDataGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartDataGroup.m; sourceTree = "<group>"; };
+		B7A5BD5520846F430033D998 /* IMChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartData.h; sourceTree = "<group>"; };
+		B7A5BD5620846F430033D998 /* IMChartDataGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartDataGroup.h; sourceTree = "<group>"; };
+		B7A5BD5920846F430033D998 /* IMChartRightTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartRightTipView.h; sourceTree = "<group>"; };
+		B7A5BD5A20846F430033D998 /* IMChartRightTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartRightTipView.m; sourceTree = "<group>"; };
+		B7A5BD5C20846F430033D998 /* IMLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMLineChartView.h; sourceTree = "<group>"; };
+		B7A5BD5E20846F430033D998 /* IMSmoothedLineChartPainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSmoothedLineChartPainer.h; sourceTree = "<group>"; };
+		B7A5BD5F20846F430033D998 /* IMSmoothedLineChartPainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSmoothedLineChartPainer.m; sourceTree = "<group>"; };
+		B7A5BD6020846F430033D998 /* IMLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMLineChartView.m; sourceTree = "<group>"; };
+		B7A5BD6220846F430033D998 /* IMChartScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartScrollView.h; sourceTree = "<group>"; };
+		B7A5BD6320846F430033D998 /* IMChartScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartScrollView.m; sourceTree = "<group>"; };
+		B7A5BD6520846F430033D998 /* IMColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMColumnChartView.m; sourceTree = "<group>"; };
+		B7A5BD6720846F430033D998 /* IMColumnChartPainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMColumnChartPainer.h; sourceTree = "<group>"; };
+		B7A5BD6820846F430033D998 /* IMColumnChartPainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMColumnChartPainer.m; sourceTree = "<group>"; };
+		B7A5BD6920846F430033D998 /* IMColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMColumnChartView.h; sourceTree = "<group>"; };
+		B7A5BD6B20846F430033D998 /* IMChartTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartTimeLineView.h; sourceTree = "<group>"; };
+		B7A5BD6C20846F430033D998 /* IMChartTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartTimeLineView.m; sourceTree = "<group>"; };
+		B7A5BD6E20846F430033D998 /* IMChartChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartChooseView.h; sourceTree = "<group>"; };
+		B7A5BD6F20846F430033D998 /* IMChartChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartChooseView.m; sourceTree = "<group>"; };
 		B7F7AA33206647C800315052 /* IMChartDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMChartDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7F7AA36206647C800315052 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B7F7AA37206647C800315052 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B7F7AA39206647C800315052 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B7F7AA3A206647C800315052 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B7F7AA3D206647C800315052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B7F7AA3F206647C800315052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B7F7AA42206647C800315052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B7F7AA44206647C800315052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7F7AA45206647C800315052 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B7F7AA5E20664A4900315052 /* IMChartData+Parse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IMChartData+Parse.h"; sourceTree = "<group>"; };
-		B7F7AA5F20664A4900315052 /* IMChartData+Parse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IMChartData+Parse.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF356F10146EC03A0959A72C /* Pods_IMChartDemo.framework in Frameworks */,
+				CBF6101F0C98ACD3372923BB /* Pods_IMChartDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +99,7 @@
 		08DF96F12C6498250059BB28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B7386948BD882C9C20EED044 /* Pods_IMChartDemo.framework */,
+				5B8182CEF7DAE0360C2D67E3 /* Pods_IMChartDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,111 +113,163 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B7A5BC56208437120033D998 /* IMChart */ = {
+		B7A5BD2620846F390033D998 /* IMChartDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BC57208437120033D998 /* IMChart.h */,
-				B7A5BC58208437120033D998 /* M */,
-				B7A5BC5D208437120033D998 /* V */,
+				B7A5BD5020846F430033D998 /* IMChart */,
+				B7A5BD2720846F390033D998 /* AppDelegate.h */,
+				B7A5BD2820846F390033D998 /* Extension */,
+				B7A5BD2D20846F390033D998 /* Resources */,
+				B7A5BD3920846F390033D998 /* ViewController.m */,
+				B7A5BD3A20846F390033D998 /* Main.storyboard */,
+				B7A5BD3C20846F390033D998 /* main.m */,
+				B7A5BD3D20846F390033D998 /* AppDelegate.m */,
+				B7A5BD3E20846F390033D998 /* Info.plist */,
+				B7A5BD3F20846F390033D998 /* ViewController.h */,
+			);
+			path = IMChartDemo;
+			sourceTree = "<group>";
+		};
+		B7A5BD2820846F390033D998 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BD2920846F390033D998 /* UIView+Rect.m */,
+				B7A5BD2A20846F390033D998 /* IMChartData+Parse.h */,
+				B7A5BD2B20846F390033D998 /* UIView+Rect.h */,
+				B7A5BD2C20846F390033D998 /* IMChartData+Parse.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B7A5BD2D20846F390033D998 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BD2E20846F390033D998 /* Assets.xcassets */,
+				B7A5BD2F20846F390033D998 /* datajson */,
+				B7A5BD3720846F390033D998 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B7A5BD2F20846F390033D998 /* datajson */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BD3020846F390033D998 /* 3m.json */,
+				B7A5BD3120846F390033D998 /* 1m.json */,
+				B7A5BD3220846F390033D998 /* 1y.json */,
+				B7A5BD3320846F390033D998 /* ytd.json */,
+				B7A5BD3420846F390033D998 /* 7d.json */,
+				B7A5BD3520846F390033D998 /* 1d.json */,
+				B7A5BD3620846F390033D998 /* all.json */,
+			);
+			path = datajson;
+			sourceTree = "<group>";
+		};
+		B7A5BD5020846F430033D998 /* IMChart */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BD5120846F430033D998 /* IMChart.h */,
+				B7A5BD5220846F430033D998 /* M */,
+				B7A5BD5720846F430033D998 /* V */,
 			);
 			name = IMChart;
 			path = ../../IMChart;
 			sourceTree = "<group>";
 		};
-		B7A5BC58208437120033D998 /* M */ = {
+		B7A5BD5220846F430033D998 /* M */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BC59208437120033D998 /* IMChartData.m */,
-				B7A5BC5A208437120033D998 /* IMChartDataGroup.m */,
-				B7A5BC5B208437120033D998 /* IMChartData.h */,
-				B7A5BC5C208437120033D998 /* IMChartDataGroup.h */,
+				B7A5BD5320846F430033D998 /* IMChartData.m */,
+				B7A5BD5420846F430033D998 /* IMChartDataGroup.m */,
+				B7A5BD5520846F430033D998 /* IMChartData.h */,
+				B7A5BD5620846F430033D998 /* IMChartDataGroup.h */,
 			);
 			path = M;
 			sourceTree = "<group>";
 		};
-		B7A5BC5D208437120033D998 /* V */ = {
+		B7A5BD5720846F430033D998 /* V */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BC5E208437120033D998 /* RightTipView */,
-				B7A5BC61208437120033D998 /* LineChartView */,
-				B7A5BC67208437120033D998 /* ChartScrollView */,
-				B7A5BC6A208437120033D998 /* ColumnChartView */,
-				B7A5BC70208437120033D998 /* TimeLineView */,
-				B7A5BC73208437120033D998 /* ChooseView */,
+				B7A5BD5820846F430033D998 /* RightTipView */,
+				B7A5BD5B20846F430033D998 /* LineChartView */,
+				B7A5BD6120846F430033D998 /* ChartScrollView */,
+				B7A5BD6420846F430033D998 /* ColumnChartView */,
+				B7A5BD6A20846F430033D998 /* TimeLineView */,
+				B7A5BD6D20846F430033D998 /* ChooseView */,
 			);
 			path = V;
 			sourceTree = "<group>";
 		};
-		B7A5BC5E208437120033D998 /* RightTipView */ = {
+		B7A5BD5820846F430033D998 /* RightTipView */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BC5F208437120033D998 /* IMChartRightTipView.h */,
-				B7A5BC60208437120033D998 /* IMChartRightTipView.m */,
+				B7A5BD5920846F430033D998 /* IMChartRightTipView.h */,
+				B7A5BD5A20846F430033D998 /* IMChartRightTipView.m */,
 			);
 			path = RightTipView;
 			sourceTree = "<group>";
 		};
-		B7A5BC61208437120033D998 /* LineChartView */ = {
+		B7A5BD5B20846F430033D998 /* LineChartView */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BC62208437120033D998 /* IMLineChartView.h */,
-				B7A5BC63208437120033D998 /* Painer */,
-				B7A5BC66208437120033D998 /* IMLineChartView.m */,
+				B7A5BD5C20846F430033D998 /* IMLineChartView.h */,
+				B7A5BD5D20846F430033D998 /* Painer */,
+				B7A5BD6020846F430033D998 /* IMLineChartView.m */,
 			);
 			path = LineChartView;
 			sourceTree = "<group>";
 		};
-		B7A5BC63208437120033D998 /* Painer */ = {
+		B7A5BD5D20846F430033D998 /* Painer */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BC64208437120033D998 /* IMSmoothedLineChartPainer.h */,
-				B7A5BC65208437120033D998 /* IMSmoothedLineChartPainer.m */,
+				B7A5BD5E20846F430033D998 /* IMSmoothedLineChartPainer.h */,
+				B7A5BD5F20846F430033D998 /* IMSmoothedLineChartPainer.m */,
 			);
 			path = Painer;
 			sourceTree = "<group>";
 		};
-		B7A5BC67208437120033D998 /* ChartScrollView */ = {
+		B7A5BD6120846F430033D998 /* ChartScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BC68208437120033D998 /* IMChartScrollView.h */,
-				B7A5BC69208437120033D998 /* IMChartScrollView.m */,
+				B7A5BD6220846F430033D998 /* IMChartScrollView.h */,
+				B7A5BD6320846F430033D998 /* IMChartScrollView.m */,
 			);
 			path = ChartScrollView;
 			sourceTree = "<group>";
 		};
-		B7A5BC6A208437120033D998 /* ColumnChartView */ = {
+		B7A5BD6420846F430033D998 /* ColumnChartView */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BC6B208437120033D998 /* IMColumnChartView.m */,
-				B7A5BC6C208437120033D998 /* Painer */,
-				B7A5BC6F208437120033D998 /* IMColumnChartView.h */,
+				B7A5BD6520846F430033D998 /* IMColumnChartView.m */,
+				B7A5BD6620846F430033D998 /* Painer */,
+				B7A5BD6920846F430033D998 /* IMColumnChartView.h */,
 			);
 			path = ColumnChartView;
 			sourceTree = "<group>";
 		};
-		B7A5BC6C208437120033D998 /* Painer */ = {
+		B7A5BD6620846F430033D998 /* Painer */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BC6D208437120033D998 /* IMColumnChartPainer.h */,
-				B7A5BC6E208437120033D998 /* IMColumnChartPainer.m */,
+				B7A5BD6720846F430033D998 /* IMColumnChartPainer.h */,
+				B7A5BD6820846F430033D998 /* IMColumnChartPainer.m */,
 			);
 			path = Painer;
 			sourceTree = "<group>";
 		};
-		B7A5BC70208437120033D998 /* TimeLineView */ = {
+		B7A5BD6A20846F430033D998 /* TimeLineView */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BC71208437120033D998 /* IMChartTimeLineView.h */,
-				B7A5BC72208437120033D998 /* IMChartTimeLineView.m */,
+				B7A5BD6B20846F430033D998 /* IMChartTimeLineView.h */,
+				B7A5BD6C20846F430033D998 /* IMChartTimeLineView.m */,
 			);
 			path = TimeLineView;
 			sourceTree = "<group>";
 		};
-		B7A5BC73208437120033D998 /* ChooseView */ = {
+		B7A5BD6D20846F430033D998 /* ChooseView */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BC74208437120033D998 /* IMChartChooseView.h */,
-				B7A5BC75208437120033D998 /* IMChartChooseView.m */,
+				B7A5BD6E20846F430033D998 /* IMChartChooseView.h */,
+				B7A5BD6F20846F430033D998 /* IMChartChooseView.m */,
 			);
 			path = ChooseView;
 			sourceTree = "<group>";
@@ -210,7 +277,7 @@
 		B7F7AA2A206647C800315052 = {
 			isa = PBXGroup;
 			children = (
-				B7F7AA35206647C800315052 /* IMChartDemo */,
+				B7A5BD2620846F390033D998 /* IMChartDemo */,
 				B7F7AA34206647C800315052 /* Products */,
 				44A7B54A8093119D7C9C054D /* Pods */,
 				08DF96F12C6498250059BB28 /* Frameworks */,
@@ -223,27 +290,6 @@
 				B7F7AA33206647C800315052 /* IMChartDemo.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B7F7AA35206647C800315052 /* IMChartDemo */ = {
-			isa = PBXGroup;
-			children = (
-				B7A5BC56208437120033D998 /* IMChart */,
-				B7F7AA36206647C800315052 /* AppDelegate.h */,
-				B7F7AA37206647C800315052 /* AppDelegate.m */,
-				B7F7AA39206647C800315052 /* ViewController.h */,
-				B7F7AA3A206647C800315052 /* ViewController.m */,
-				B7F7AA3C206647C800315052 /* Main.storyboard */,
-				B7F7AA3F206647C800315052 /* Assets.xcassets */,
-				B7F7AA41206647C800315052 /* LaunchScreen.storyboard */,
-				B7F7AA44206647C800315052 /* Info.plist */,
-				B7F7AA45206647C800315052 /* main.m */,
-				B76B6BAC2081F0070049F8A2 /* UIView+Rect.h */,
-				B76B6BAD2081F0070049F8A2 /* UIView+Rect.m */,
-				B7F7AA5E20664A4900315052 /* IMChartData+Parse.h */,
-				B7F7AA5F20664A4900315052 /* IMChartData+Parse.m */,
-			);
-			path = IMChartDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,9 +353,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7F7AA43206647C800315052 /* LaunchScreen.storyboard in Resources */,
-				B7F7AA40206647C800315052 /* Assets.xcassets in Resources */,
-				B7F7AA3E206647C800315052 /* Main.storyboard in Resources */,
+				B7A5BD4A20846F390033D998 /* LaunchScreen.storyboard in Resources */,
+				B7A5BD4C20846F390033D998 /* Main.storyboard in Resources */,
+				B7A5BD4720846F390033D998 /* 7d.json in Resources */,
+				B7A5BD4920846F390033D998 /* all.json in Resources */,
+				B7A5BD4420846F390033D998 /* 1m.json in Resources */,
+				B7A5BD4520846F390033D998 /* 1y.json in Resources */,
+				B7A5BD4220846F390033D998 /* Assets.xcassets in Resources */,
+				B7A5BD4620846F390033D998 /* ytd.json in Resources */,
+				B7A5BD4F20846F390033D998 /* Info.plist in Resources */,
+				B7A5BD4820846F390033D998 /* 1d.json in Resources */,
+				B7A5BD4320846F390033D998 /* 3m.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,14 +392,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IMChartDemo/Pods-IMChartDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${PODS_ROOT}/Reveal-SDK/RevealServer-13/iOS/RevealServer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
@@ -380,41 +432,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7A5BC77208437120033D998 /* IMChartDataGroup.m in Sources */,
-				B7F7AA3B206647C800315052 /* ViewController.m in Sources */,
-				B7F7AA46206647C800315052 /* main.m in Sources */,
-				B7F7AA6020664A4900315052 /* IMChartData+Parse.m in Sources */,
-				B7A5BC7E208437120033D998 /* IMChartTimeLineView.m in Sources */,
-				B7A5BC79208437120033D998 /* IMSmoothedLineChartPainer.m in Sources */,
-				B7A5BC7A208437120033D998 /* IMLineChartView.m in Sources */,
-				B76B6BAE2081F0070049F8A2 /* UIView+Rect.m in Sources */,
-				B7A5BC7D208437120033D998 /* IMColumnChartPainer.m in Sources */,
-				B7A5BC76208437120033D998 /* IMChartData.m in Sources */,
-				B7A5BC78208437120033D998 /* IMChartRightTipView.m in Sources */,
-				B7A5BC7B208437120033D998 /* IMChartScrollView.m in Sources */,
-				B7F7AA38206647C800315052 /* AppDelegate.m in Sources */,
-				B7A5BC7F208437120033D998 /* IMChartChooseView.m in Sources */,
-				B7A5BC7C208437120033D998 /* IMColumnChartView.m in Sources */,
+				B7A5BD7120846F440033D998 /* IMChartDataGroup.m in Sources */,
+				B7A5BD4B20846F390033D998 /* ViewController.m in Sources */,
+				B7A5BD4120846F390033D998 /* IMChartData+Parse.m in Sources */,
+				B7A5BD4D20846F390033D998 /* main.m in Sources */,
+				B7A5BD7820846F440033D998 /* IMChartTimeLineView.m in Sources */,
+				B7A5BD7320846F440033D998 /* IMSmoothedLineChartPainer.m in Sources */,
+				B7A5BD7420846F440033D998 /* IMLineChartView.m in Sources */,
+				B7A5BD4020846F390033D998 /* UIView+Rect.m in Sources */,
+				B7A5BD7720846F440033D998 /* IMColumnChartPainer.m in Sources */,
+				B7A5BD7020846F440033D998 /* IMChartData.m in Sources */,
+				B7A5BD7220846F440033D998 /* IMChartRightTipView.m in Sources */,
+				B7A5BD7520846F440033D998 /* IMChartScrollView.m in Sources */,
+				B7A5BD4E20846F390033D998 /* AppDelegate.m in Sources */,
+				B7A5BD7920846F440033D998 /* IMChartChooseView.m in Sources */,
+				B7A5BD7620846F440033D998 /* IMColumnChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B7F7AA3C206647C800315052 /* Main.storyboard */ = {
+		B7A5BD3720846F390033D998 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B7F7AA3D206647C800315052 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B7F7AA41206647C800315052 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B7F7AA42206647C800315052 /* Base */,
+				B7A5BD3820846F390033D998 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B7A5BD3A20846F390033D998 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7A5BD3B20846F390033D998 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
