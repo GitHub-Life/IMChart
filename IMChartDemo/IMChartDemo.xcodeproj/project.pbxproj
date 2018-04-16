@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B76B6BAE2081F0070049F8A2 /* UIView+Rect.m in Sources */ = {isa = PBXBuildFile; fileRef = B76B6BAD2081F0070049F8A2 /* UIView+Rect.m */; };
+		B7A5BC76208437120033D998 /* IMChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC59208437120033D998 /* IMChartData.m */; };
+		B7A5BC77208437120033D998 /* IMChartDataGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC5A208437120033D998 /* IMChartDataGroup.m */; };
+		B7A5BC78208437120033D998 /* IMChartRightTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC60208437120033D998 /* IMChartRightTipView.m */; };
+		B7A5BC79208437120033D998 /* IMSmoothedLineChartPainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC65208437120033D998 /* IMSmoothedLineChartPainer.m */; };
+		B7A5BC7A208437120033D998 /* IMLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC66208437120033D998 /* IMLineChartView.m */; };
+		B7A5BC7B208437120033D998 /* IMChartScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC69208437120033D998 /* IMChartScrollView.m */; };
+		B7A5BC7C208437120033D998 /* IMColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC6B208437120033D998 /* IMColumnChartView.m */; };
+		B7A5BC7D208437120033D998 /* IMColumnChartPainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC6E208437120033D998 /* IMColumnChartPainer.m */; };
+		B7A5BC7E208437120033D998 /* IMChartTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC72208437120033D998 /* IMChartTimeLineView.m */; };
+		B7A5BC7F208437120033D998 /* IMChartChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BC75208437120033D998 /* IMChartChooseView.m */; };
+		B7F7AA38206647C800315052 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F7AA37206647C800315052 /* AppDelegate.m */; };
+		B7F7AA3B206647C800315052 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F7AA3A206647C800315052 /* ViewController.m */; };
+		B7F7AA3E206647C800315052 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F7AA3C206647C800315052 /* Main.storyboard */; };
+		B7F7AA40206647C800315052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F7AA3F206647C800315052 /* Assets.xcassets */; };
+		B7F7AA43206647C800315052 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F7AA41206647C800315052 /* LaunchScreen.storyboard */; };
+		B7F7AA46206647C800315052 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F7AA45206647C800315052 /* main.m */; };
+		B7F7AA6020664A4900315052 /* IMChartData+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F7AA5F20664A4900315052 /* IMChartData+Parse.m */; };
+		DF356F10146EC03A0959A72C /* Pods_IMChartDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7386948BD882C9C20EED044 /* Pods_IMChartDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1383C607B15683410F540827 /* Pods-IMChartDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChartDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMChartDemo/Pods-IMChartDemo.release.xcconfig"; sourceTree = "<group>"; };
+		3D77293E09D0E5EB754035BB /* Pods-IMChartDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChartDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMChartDemo/Pods-IMChartDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B7386948BD882C9C20EED044 /* Pods_IMChartDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMChartDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76B6BAC2081F0070049F8A2 /* UIView+Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Rect.h"; sourceTree = "<group>"; };
+		B76B6BAD2081F0070049F8A2 /* UIView+Rect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Rect.m"; sourceTree = "<group>"; };
+		B7A5BC57208437120033D998 /* IMChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChart.h; sourceTree = "<group>"; };
+		B7A5BC59208437120033D998 /* IMChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartData.m; sourceTree = "<group>"; };
+		B7A5BC5A208437120033D998 /* IMChartDataGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartDataGroup.m; sourceTree = "<group>"; };
+		B7A5BC5B208437120033D998 /* IMChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartData.h; sourceTree = "<group>"; };
+		B7A5BC5C208437120033D998 /* IMChartDataGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartDataGroup.h; sourceTree = "<group>"; };
+		B7A5BC5F208437120033D998 /* IMChartRightTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartRightTipView.h; sourceTree = "<group>"; };
+		B7A5BC60208437120033D998 /* IMChartRightTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartRightTipView.m; sourceTree = "<group>"; };
+		B7A5BC62208437120033D998 /* IMLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMLineChartView.h; sourceTree = "<group>"; };
+		B7A5BC64208437120033D998 /* IMSmoothedLineChartPainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSmoothedLineChartPainer.h; sourceTree = "<group>"; };
+		B7A5BC65208437120033D998 /* IMSmoothedLineChartPainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSmoothedLineChartPainer.m; sourceTree = "<group>"; };
+		B7A5BC66208437120033D998 /* IMLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMLineChartView.m; sourceTree = "<group>"; };
+		B7A5BC68208437120033D998 /* IMChartScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartScrollView.h; sourceTree = "<group>"; };
+		B7A5BC69208437120033D998 /* IMChartScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartScrollView.m; sourceTree = "<group>"; };
+		B7A5BC6B208437120033D998 /* IMColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMColumnChartView.m; sourceTree = "<group>"; };
+		B7A5BC6D208437120033D998 /* IMColumnChartPainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMColumnChartPainer.h; sourceTree = "<group>"; };
+		B7A5BC6E208437120033D998 /* IMColumnChartPainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMColumnChartPainer.m; sourceTree = "<group>"; };
+		B7A5BC6F208437120033D998 /* IMColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMColumnChartView.h; sourceTree = "<group>"; };
+		B7A5BC71208437120033D998 /* IMChartTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartTimeLineView.h; sourceTree = "<group>"; };
+		B7A5BC72208437120033D998 /* IMChartTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartTimeLineView.m; sourceTree = "<group>"; };
+		B7A5BC74208437120033D998 /* IMChartChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartChooseView.h; sourceTree = "<group>"; };
+		B7A5BC75208437120033D998 /* IMChartChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartChooseView.m; sourceTree = "<group>"; };
+		B7F7AA33206647C800315052 /* IMChartDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMChartDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7F7AA36206647C800315052 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B7F7AA37206647C800315052 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B7F7AA39206647C800315052 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B7F7AA3A206647C800315052 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B7F7AA3D206647C800315052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7F7AA3F206647C800315052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7F7AA42206647C800315052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7F7AA44206647C800315052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7F7AA45206647C800315052 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B7F7AA5E20664A4900315052 /* IMChartData+Parse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IMChartData+Parse.h"; sourceTree = "<group>"; };
+		B7F7AA5F20664A4900315052 /* IMChartData+Parse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IMChartData+Parse.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7F7AA30206647C800315052 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF356F10146EC03A0959A72C /* Pods_IMChartDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08DF96F12C6498250059BB28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7386948BD882C9C20EED044 /* Pods_IMChartDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44A7B54A8093119D7C9C054D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D77293E09D0E5EB754035BB /* Pods-IMChartDemo.debug.xcconfig */,
+				1383C607B15683410F540827 /* Pods-IMChartDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B7A5BC56208437120033D998 /* IMChart */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BC57208437120033D998 /* IMChart.h */,
+				B7A5BC58208437120033D998 /* M */,
+				B7A5BC5D208437120033D998 /* V */,
+			);
+			name = IMChart;
+			path = ../../IMChart;
+			sourceTree = "<group>";
+		};
+		B7A5BC58208437120033D998 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BC59208437120033D998 /* IMChartData.m */,
+				B7A5BC5A208437120033D998 /* IMChartDataGroup.m */,
+				B7A5BC5B208437120033D998 /* IMChartData.h */,
+				B7A5BC5C208437120033D998 /* IMChartDataGroup.h */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		B7A5BC5D208437120033D998 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BC5E208437120033D998 /* RightTipView */,
+				B7A5BC61208437120033D998 /* LineChartView */,
+				B7A5BC67208437120033D998 /* ChartScrollView */,
+				B7A5BC6A208437120033D998 /* ColumnChartView */,
+				B7A5BC70208437120033D998 /* TimeLineView */,
+				B7A5BC73208437120033D998 /* ChooseView */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		B7A5BC5E208437120033D998 /* RightTipView */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BC5F208437120033D998 /* IMChartRightTipView.h */,
+				B7A5BC60208437120033D998 /* IMChartRightTipView.m */,
+			);
+			path = RightTipView;
+			sourceTree = "<group>";
+		};
+		B7A5BC61208437120033D998 /* LineChartView */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BC62208437120033D998 /* IMLineChartView.h */,
+				B7A5BC63208437120033D998 /* Painer */,
+				B7A5BC66208437120033D998 /* IMLineChartView.m */,
+			);
+			path = LineChartView;
+			sourceTree = "<group>";
+		};
+		B7A5BC63208437120033D998 /* Painer */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BC64208437120033D998 /* IMSmoothedLineChartPainer.h */,
+				B7A5BC65208437120033D998 /* IMSmoothedLineChartPainer.m */,
+			);
+			path = Painer;
+			sourceTree = "<group>";
+		};
+		B7A5BC67208437120033D998 /* ChartScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BC68208437120033D998 /* IMChartScrollView.h */,
+				B7A5BC69208437120033D998 /* IMChartScrollView.m */,
+			);
+			path = ChartScrollView;
+			sourceTree = "<group>";
+		};
+		B7A5BC6A208437120033D998 /* ColumnChartView */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BC6B208437120033D998 /* IMColumnChartView.m */,
+				B7A5BC6C208437120033D998 /* Painer */,
+				B7A5BC6F208437120033D998 /* IMColumnChartView.h */,
+			);
+			path = ColumnChartView;
+			sourceTree = "<group>";
+		};
+		B7A5BC6C208437120033D998 /* Painer */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BC6D208437120033D998 /* IMColumnChartPainer.h */,
+				B7A5BC6E208437120033D998 /* IMColumnChartPainer.m */,
+			);
+			path = Painer;
+			sourceTree = "<group>";
+		};
+		B7A5BC70208437120033D998 /* TimeLineView */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BC71208437120033D998 /* IMChartTimeLineView.h */,
+				B7A5BC72208437120033D998 /* IMChartTimeLineView.m */,
+			);
+			path = TimeLineView;
+			sourceTree = "<group>";
+		};
+		B7A5BC73208437120033D998 /* ChooseView */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BC74208437120033D998 /* IMChartChooseView.h */,
+				B7A5BC75208437120033D998 /* IMChartChooseView.m */,
+			);
+			path = ChooseView;
+			sourceTree = "<group>";
+		};
+		B7F7AA2A206647C800315052 = {
+			isa = PBXGroup;
+			children = (
+				B7F7AA35206647C800315052 /* IMChartDemo */,
+				B7F7AA34206647C800315052 /* Products */,
+				44A7B54A8093119D7C9C054D /* Pods */,
+				08DF96F12C6498250059BB28 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B7F7AA34206647C800315052 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7F7AA33206647C800315052 /* IMChartDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7F7AA35206647C800315052 /* IMChartDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B7A5BC56208437120033D998 /* IMChart */,
+				B7F7AA36206647C800315052 /* AppDelegate.h */,
+				B7F7AA37206647C800315052 /* AppDelegate.m */,
+				B7F7AA39206647C800315052 /* ViewController.h */,
+				B7F7AA3A206647C800315052 /* ViewController.m */,
+				B7F7AA3C206647C800315052 /* Main.storyboard */,
+				B7F7AA3F206647C800315052 /* Assets.xcassets */,
+				B7F7AA41206647C800315052 /* LaunchScreen.storyboard */,
+				B7F7AA44206647C800315052 /* Info.plist */,
+				B7F7AA45206647C800315052 /* main.m */,
+				B76B6BAC2081F0070049F8A2 /* UIView+Rect.h */,
+				B76B6BAD2081F0070049F8A2 /* UIView+Rect.m */,
+				B7F7AA5E20664A4900315052 /* IMChartData+Parse.h */,
+				B7F7AA5F20664A4900315052 /* IMChartData+Parse.m */,
+			);
+			path = IMChartDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7F7AA32206647C800315052 /* IMChartDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7F7AA49206647C800315052 /* Build configuration list for PBXNativeTarget "IMChartDemo" */;
+			buildPhases = (
+				A601A29C9BE5F78E42294244 /* [CP] Check Pods Manifest.lock */,
+				B7F7AA2F206647C800315052 /* Sources */,
+				B7F7AA30206647C800315052 /* Frameworks */,
+				B7F7AA31206647C800315052 /* Resources */,
+				6B5B45F103508223DD12BC97 /* [CP] Embed Pods Frameworks */,
+				4B235DBA483C23F05CE51BE3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IMChartDemo;
+			productName = IMChartDemo;
+			productReference = B7F7AA33206647C800315052 /* IMChartDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7F7AA2B206647C800315052 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = iMoon;
+				TargetAttributes = {
+					B7F7AA32206647C800315052 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B7F7AA2E206647C800315052 /* Build configuration list for PBXProject "IMChartDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7F7AA2A206647C800315052;
+			productRefGroup = B7F7AA34206647C800315052 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7F7AA32206647C800315052 /* IMChartDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7F7AA31206647C800315052 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7F7AA43206647C800315052 /* LaunchScreen.storyboard in Resources */,
+				B7F7AA40206647C800315052 /* Assets.xcassets in Resources */,
+				B7F7AA3E206647C800315052 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B235DBA483C23F05CE51BE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMChartDemo/Pods-IMChartDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B5B45F103508223DD12BC97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IMChartDemo/Pods-IMChartDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-13/iOS/RevealServer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMChartDemo/Pods-IMChartDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A601A29C9BE5F78E42294244 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMChartDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7F7AA2F206647C800315052 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A5BC77208437120033D998 /* IMChartDataGroup.m in Sources */,
+				B7F7AA3B206647C800315052 /* ViewController.m in Sources */,
+				B7F7AA46206647C800315052 /* main.m in Sources */,
+				B7F7AA6020664A4900315052 /* IMChartData+Parse.m in Sources */,
+				B7A5BC7E208437120033D998 /* IMChartTimeLineView.m in Sources */,
+				B7A5BC79208437120033D998 /* IMSmoothedLineChartPainer.m in Sources */,
+				B7A5BC7A208437120033D998 /* IMLineChartView.m in Sources */,
+				B76B6BAE2081F0070049F8A2 /* UIView+Rect.m in Sources */,
+				B7A5BC7D208437120033D998 /* IMColumnChartPainer.m in Sources */,
+				B7A5BC76208437120033D998 /* IMChartData.m in Sources */,
+				B7A5BC78208437120033D998 /* IMChartRightTipView.m in Sources */,
+				B7A5BC7B208437120033D998 /* IMChartScrollView.m in Sources */,
+				B7F7AA38206647C800315052 /* AppDelegate.m in Sources */,
+				B7A5BC7F208437120033D998 /* IMChartChooseView.m in Sources */,
+				B7A5BC7C208437120033D998 /* IMColumnChartView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B7F7AA3C206647C800315052 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7F7AA3D206647C800315052 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B7F7AA41206647C800315052 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7F7AA42206647C800315052 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B7F7AA47206647C800315052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B7F7AA48206647C800315052 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7F7AA4A206647C800315052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D77293E09D0E5EB754035BB /* Pods-IMChartDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WXK7UF23NY;
+				INFOPLIST_FILE = IMChartDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeeyuntech.IMChartDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7F7AA4B206647C800315052 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1383C607B15683410F540827 /* Pods-IMChartDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WXK7UF23NY;
+				INFOPLIST_FILE = IMChartDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeeyuntech.IMChartDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7F7AA2E206647C800315052 /* Build configuration list for PBXProject "IMChartDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7F7AA47206647C800315052 /* Debug */,
+				B7F7AA48206647C800315052 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7F7AA49206647C800315052 /* Build configuration list for PBXNativeTarget "IMChartDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7F7AA4A206647C800315052 /* Debug */,
+				B7F7AA4B206647C800315052 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7F7AA2B206647C800315052 /* Project object */;
+}
