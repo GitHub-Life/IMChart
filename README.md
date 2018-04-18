@@ -13,7 +13,7 @@ iOS-OC-趋势图、成交量柱状图，支持缩放
 ![综合演示](https://github.com/GitHub-Life/IMChart/raw/master/Picture/composite_demo.gif)
 ---
 ## 双向柱状图
-![双向柱状图](https://github.com/GitHub-Life/IMChart/raw/master/Picture/screen_shot2.gif)
+![双向柱状图](https://github.com/GitHub-Life/IMChart/raw/master/Picture/screen_shot2.png)
 ---
 #### 导入项目方法：
 git clone此项目到本地，将根目录下的 IMChart 文件夹导入至项目即可使用；
