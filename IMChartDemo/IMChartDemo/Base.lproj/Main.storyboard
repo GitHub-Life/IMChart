@@ -240,11 +240,32 @@
                                             <constraint firstAttribute="trailing" secondItem="W3d-J1-yxf" secondAttribute="trailing" id="rz5-AW-3R4"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUz-Yc-QXa">
+                                        <rect key="frame" x="20" y="587" width="335" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Gqo-Qt-4Sr"/>
+                                        </constraints>
+                                        <state key="normal" title="Both Column Chart">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="lzT-rL-o49" kind="show" id="JuS-5M-rfY"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="pTR-i3-y8o" firstAttribute="centerY" secondItem="fNt-Vu-Dco" secondAttribute="centerY" id="2oc-TD-7nV"/>
                                     <constraint firstAttribute="trailing" secondItem="pTR-i3-y8o" secondAttribute="trailing" id="BB2-fu-g7n"/>
+                                    <constraint firstAttribute="bottom" secondItem="NUz-Yc-QXa" secondAttribute="bottom" constant="20" id="GKI-ci-TUN"/>
+                                    <constraint firstItem="NUz-Yc-QXa" firstAttribute="leading" secondItem="fNt-Vu-Dco" secondAttribute="leading" constant="20" id="QUH-BE-8a0"/>
+                                    <constraint firstAttribute="trailing" secondItem="NUz-Yc-QXa" secondAttribute="trailing" constant="20" id="exW-FV-DuG"/>
                                     <constraint firstItem="pTR-i3-y8o" firstAttribute="leading" secondItem="fNt-Vu-Dco" secondAttribute="leading" id="oVd-fh-xqJ"/>
                                 </constraints>
                             </view>
@@ -273,6 +294,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="36" y="33.733133433283363"/>
+        </scene>
+        <!--View Controller1-->
+        <scene sceneID="gVK-3p-ysP">
+            <objects>
+                <viewController id="lzT-rL-o49" customClass="ViewController1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bMl-oG-vO0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KiY-8Z-PyN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogW-fZ-3Pp" customClass="IMBothColumnChartView">
+                                        <rect key="frame" x="0.0" y="223.5" width="375" height="200"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="swK-Qv-Ykl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ogW-fZ-3Pp" secondAttribute="trailing" id="8bM-22-lzi"/>
+                                    <constraint firstItem="ogW-fZ-3Pp" firstAttribute="leading" secondItem="KiY-8Z-PyN" secondAttribute="leading" id="RdN-Xm-z6S"/>
+                                    <constraint firstItem="ogW-fZ-3Pp" firstAttribute="centerY" secondItem="KiY-8Z-PyN" secondAttribute="centerY" id="auw-HH-9vw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KiY-8Z-PyN" firstAttribute="leading" secondItem="aQU-Vo-aRb" secondAttribute="leading" id="3ps-bI-CfN"/>
+                            <constraint firstItem="KiY-8Z-PyN" firstAttribute="top" secondItem="aQU-Vo-aRb" secondAttribute="top" id="HN5-fy-dUG"/>
+                            <constraint firstItem="aQU-Vo-aRb" firstAttribute="bottom" secondItem="KiY-8Z-PyN" secondAttribute="bottom" id="XrB-sp-tv1"/>
+                            <constraint firstItem="aQU-Vo-aRb" firstAttribute="trailing" secondItem="KiY-8Z-PyN" secondAttribute="trailing" id="cGb-kB-lFH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aQU-Vo-aRb"/>
+                    </view>
+                    <connections>
+                        <outlet property="bothColumnChartView" destination="ogW-fZ-3Pp" id="rRy-Yw-k48"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgg-7Y-AOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="34"/>
         </scene>
     </scenes>
 </document>

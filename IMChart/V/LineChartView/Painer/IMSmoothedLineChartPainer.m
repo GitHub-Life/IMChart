@@ -8,14 +8,15 @@
 
 #import "IMSmoothedLineChartPainer.h"
 #import "IMChartData.h"
+#import "IMChartPoint.h"
 
 @implementation IMSmoothedLineChartPainer
 
 - (void)drawWithDataArray:(NSArray<IMChartData *> *)dataArray context:(CGContextRef)context lineColors:(NSArray<UIColor *> *)lineColors lineShowStates:(NSArray<NSNumber *> *)lineShowStates {
     NSInteger lineQty = MIN(MIN(dataArray[0].linePoints.count, lineColors.count), lineShowStates.count);
-    NSMutableArray<NSArray<IMPoint *> *> *points = [NSMutableArray array];
+    NSMutableArray<NSArray<IMChartPoint *> *> *points = [NSMutableArray array];
     for (int i = 0; i < lineQty; i++) {
-        NSMutableArray<IMPoint *> *subPoints = [NSMutableArray array];
+        NSMutableArray<IMChartPoint *> *subPoints = [NSMutableArray array];
         for (IMChartData *data in dataArray) {
             [subPoints addObject:data.linePoints[i]];
         }
@@ -35,7 +36,7 @@
     CGContextStrokePath(context);
 }
 
-- (UIBezierPath *)curvedPathWithPoints:(NSArray<IMPoint *> *)points {
+- (UIBezierPath *)curvedPathWithPoints:(NSArray<IMChartPoint *> *)points {
     UIBezierPath *curvedPath = [[UIBezierPath alloc] init];
     [curvedPath moveToPoint:points[0].cgPoint];
     if (points.count == 2) {

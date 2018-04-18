@@ -11,6 +11,7 @@
 #import "IMSmoothedLineChartPainer.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "UIView+Rect.h"
+#import "IMChartPoint.h"
 
 @interface IMLineChartView ()
 
@@ -165,9 +166,9 @@
     for (int i = 0; i < _drawDataArray.count; i++) {
         IMChartData *data = _drawDataArray[i];
         CGFloat xPosition = (beginIndex + i) * _unitX;
-        NSMutableArray<IMPoint *> *points = [NSMutableArray array];
+        NSMutableArray<IMChartPoint *> *points = [NSMutableArray array];
         for (int j = 0; j < data.lineValues.count; j++) {
-            [points addObject:[IMPoint point:xPosition :maxY - (unitValues[j].doubleValue > 0 ? ((data.lineValues[j].doubleValue - minValues[j].doubleValue) / unitValues[j].doubleValue) : 0)]];
+            [points addObject:[IMChartPoint point:xPosition :maxY - (unitValues[j].doubleValue > 0 ? ((data.lineValues[j].doubleValue - minValues[j].doubleValue) / unitValues[j].doubleValue) : 0)]];
         }
         data.linePoints = points;
     }

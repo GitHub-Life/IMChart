@@ -7,13 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface IMPoint : NSObject
-@property (nonatomic, assign) CGFloat x;
-@property (nonatomic, assign) CGFloat y;
-+ (instancetype)point:(CGFloat)x :(CGFloat)y;
-- (CGPoint)cgPoint;
-@end
+@class IMChartPoint;
 
 @interface IMChartData : NSObject
 
@@ -25,8 +19,8 @@
 @property (nonatomic, assign) NSTimeInterval timeStamp;
 
 /** 用于绘制线的坐标集合【由lineValues转换而得】 */
-@property (nonatomic, strong) NSArray<IMPoint *> *linePoints;
-/** 用于绘制条形柱状图的坐标 两个坐标，第一个值为0，即y为视图高度值【由columeValue转换而得】 */
-@property (nonatomic, strong) NSArray<IMPoint *> *columnPoints;
+@property (nonatomic, strong) NSArray<IMChartPoint *> *linePoints;
+/** 用于绘制条形柱状图的坐标【由columeValue转换而得】 */
+@property (nonatomic, strong) IMChartPoint *columnPoint;
 
 @end

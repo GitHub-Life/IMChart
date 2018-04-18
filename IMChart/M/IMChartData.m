@@ -8,21 +8,6 @@
 
 #import "IMChartData.h"
 
-@implementation IMPoint
-
-+ (instancetype)point:(CGFloat)x :(CGFloat)y {
-    IMPoint *point = [[IMPoint alloc] init];
-    point.x = x;
-    point.y = y;
-    return point;
-}
-
-- (CGPoint)cgPoint {
-    return CGPointMake(_x, _y);
-}
-
-@end
-
 @implementation IMChartData
 
 @end

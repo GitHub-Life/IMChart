@@ -10,6 +10,7 @@
 #import "IMChartDataGroup.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "IMColumnChartPainer.h"
+#import "IMChartPoint.h"
 
 @interface IMColumnChartView ()
 
@@ -130,7 +131,9 @@
     for (int i = 0; i < _drawDataArray.count; i++) {
         IMChartData *data = _drawDataArray[i];
         CGFloat xPosition = (beginIndex + i) * _unitX * 2;
-        data.columnPoints = @[[IMPoint point:xPosition :maxY], [IMPoint point:xPosition :maxY - (unitValue > 0 ? ((data.columeValue.doubleValue - minValue) / unitValue) : 0)]];
+        IMChartPoint *columnPoint = [IMChartPoint point:xPosition :maxY - (unitValue > 0 ? ((data.columeValue.doubleValue - minValue) / unitValue) : 0)];
+        columnPoint.dataYzeroPoint = [IMChartPoint point:xPosition :maxY];
+        data.columnPoint = columnPoint;
     }
 }
 

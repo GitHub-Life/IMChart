@@ -8,14 +8,15 @@
 
 #import "IMColumnChartPainer.h"
 #import "IMChartData.h"
+#import "IMChartPoint.h"
 
 @implementation IMColumnChartPainer
 
 - (void)drawWithDataArray:(NSArray<IMChartData *> *)dataArray context:(CGContextRef)context {
     CGContextBeginPath(context);
     for (IMChartData *data in dataArray) {
-        CGPoint zeroPoint = data.columnPoints[0].cgPoint;
-        CGPoint valuePoint = data.columnPoints[1].cgPoint;
+        CGPoint zeroPoint = data.columnPoint.dataYzeroPoint.cgPoint;
+        CGPoint valuePoint = data.columnPoint.cgPoint;
         CGContextMoveToPoint(context, zeroPoint.x, zeroPoint.y);
         CGContextAddLineToPoint(context, valuePoint.x, valuePoint.y);
     }
