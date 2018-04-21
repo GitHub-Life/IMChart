@@ -16,22 +16,22 @@
 /** 显示数据的字体 */
 @property (nonatomic, copy) UIFont *dataFont;
 /** 正值颜色 */
-@property (nonatomic, copy) UIColor *positiveColor;
+@property (nonatomic, copy) IBInspectable UIColor *positiveColor;
 /** 负值颜色 */
-@property (nonatomic, copy) UIColor *negativeColor;
+@property (nonatomic, copy) IBInspectable UIColor *negativeColor;
 /** 坐标轴颜色 */
-@property (nonatomic, copy) UIColor *coordAxisColor;
+@property (nonatomic, copy) IBInspectable UIColor *coordAxisColor;
 /** 图标边距 */
 @property (nonatomic, assign) UIEdgeInsets chartEdgeInsets;
 
 /** 是否绘制时间 */
-@property (nonatomic, assign) BOOL drawTime;
+@property (nonatomic, assign) IBInspectable BOOL drawTime;
 /** 时间格式化字符串 */
-@property (nonatomic, copy) NSString *dateFormat;
+@property (nonatomic, copy) IBInspectable NSString *dateFormat;
 /** 时间字体 */
 @property (nonatomic, copy) UIFont *timeFont;
 /** 描述文字颜色(时间也用此色) */
-@property (nonatomic, copy) UIColor *descColor;
+@property (nonatomic, copy) IBInspectable UIColor *descColor;
 /** 描述集合，当此值不为nil或empty时，则绘制描述 */
 @property (nonatomic, strong) NSArray<NSString *> *descArray;
 /** 显示描述的字体 */
