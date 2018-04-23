@@ -1,12 +1,12 @@
 //
-//  UIView+Rect.m
+//  UIView+IMRect.m
 //  NiuYan
 //
 //  Created by 万涛 on 2018/3/15.
 //  Copyright © 2018年 niuyan.com. All rights reserved.
 //
 
-#import "UIView+Rect.h"
+#import "UIView+IMRect.h"
 
 @implementation UIView (Rect)
 
@@ -96,18 +96,6 @@
 
 -(CGFloat)centerY {
     return CGRectGetMidY(self.frame);
-}
-
-- (void)addTapGestureRecognizerWithTarget:(id)target action:(SEL)action {
-    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
-    [self setUserInteractionEnabled:YES];
-    [self addGestureRecognizer:tapGr];
-}
-
-- (void)addLongPressGestureRecognizerWithTarget:(id)target action:(SEL)action {
-    UILongPressGestureRecognizer *longPressGr = [[UILongPressGestureRecognizer alloc] initWithTarget:target action:action];
-    [self setUserInteractionEnabled:YES];
-    [self addGestureRecognizer:longPressGr];
 }
 
 @end

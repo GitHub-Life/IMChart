@@ -1,5 +1,5 @@
 //
-//  UIView+Rect.h
+//  UIView+IMRect.h
 //  NiuYan
 //
 //  Created by 万涛 on 2018/3/15.
@@ -19,11 +19,5 @@
 
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;
-
-/** 添加单击手势 */
-- (void)addTapGestureRecognizerWithTarget:(id)target action:(SEL)action;
-
-/** 添加长按手势 */
-- (void)addLongPressGestureRecognizerWithTarget:(id)target action:(SEL)action;
 
 @end

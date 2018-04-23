@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B76276D920871F500033BD8E /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = B76276D820871F500033BD8E /* ViewController1.m */; };
-		B7A5BD4020846F390033D998 /* UIView+Rect.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD2920846F390033D998 /* UIView+Rect.m */; };
+		B7A5BD4020846F390033D998 /* UIView+IMRect.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD2920846F390033D998 /* UIView+IMRect.m */; };
 		B7A5BD4120846F390033D998 /* IMChartData+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD2C20846F390033D998 /* IMChartData+Parse.m */; };
 		B7A5BD4220846F390033D998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD2E20846F390033D998 /* Assets.xcassets */; };
 		B7A5BD4320846F390033D998 /* 3m.json in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3020846F390033D998 /* 3m.json */; };
@@ -46,9 +46,9 @@
 		B76276D720871F500033BD8E /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
 		B76276D820871F500033BD8E /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 		B7A5BD2720846F390033D998 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B7A5BD2920846F390033D998 /* UIView+Rect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Rect.m"; sourceTree = "<group>"; };
+		B7A5BD2920846F390033D998 /* UIView+IMRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IMRect.m"; sourceTree = "<group>"; };
 		B7A5BD2A20846F390033D998 /* IMChartData+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IMChartData+Parse.h"; sourceTree = "<group>"; };
-		B7A5BD2B20846F390033D998 /* UIView+Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Rect.h"; sourceTree = "<group>"; };
+		B7A5BD2B20846F390033D998 /* UIView+IMRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IMRect.h"; sourceTree = "<group>"; };
 		B7A5BD2C20846F390033D998 /* IMChartData+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IMChartData+Parse.m"; sourceTree = "<group>"; };
 		B7A5BD2E20846F390033D998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7A5BD3020846F390033D998 /* 3m.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 3m.json; sourceTree = "<group>"; };
@@ -140,9 +140,9 @@
 		B7A5BD2820846F390033D998 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BD2920846F390033D998 /* UIView+Rect.m */,
+				B7A5BD2920846F390033D998 /* UIView+IMRect.m */,
 				B7A5BD2A20846F390033D998 /* IMChartData+Parse.h */,
-				B7A5BD2B20846F390033D998 /* UIView+Rect.h */,
+				B7A5BD2B20846F390033D998 /* UIView+IMRect.h */,
 				B7A5BD2C20846F390033D998 /* IMChartData+Parse.m */,
 			);
 			path = Extension;
@@ -461,7 +461,7 @@
 				B7E2C0D6208D777C009299CA /* IMLineChartView.m in Sources */,
 				B7E2C0D2208D777C009299CA /* IMChartPoint.m in Sources */,
 				B7A5BD4D20846F390033D998 /* main.m in Sources */,
-				B7A5BD4020846F390033D998 /* UIView+Rect.m in Sources */,
+				B7A5BD4020846F390033D998 /* UIView+IMRect.m in Sources */,
 				B76276D920871F500033BD8E /* ViewController1.m in Sources */,
 				B7E2C0D7208D777C009299CA /* IMChartScrollView.m in Sources */,
 				B7E2C0D9208D777C009299CA /* IMColumnChartPainer.m in Sources */,
