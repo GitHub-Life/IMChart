@@ -10,7 +10,7 @@
 #import "IMChartDataGroup.h"
 #import "IMSmoothedLineChartPainer.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "UIView+Rect.h"
+#import "UIView+IMRect.h"
 #import "IMChartPoint.h"
 
 @interface IMLineChartView ()

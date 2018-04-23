@@ -11,7 +11,7 @@
 #import "IMColumnChartView.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Masonry/Masonry.h>
-#import "UIView+Rect.h"
+#import "UIView+IMRect.h"
 
 #define MinZoomScale 1
 #define MaxZoomScale 20

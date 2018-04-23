@@ -15,6 +15,8 @@
 @property (nonatomic, strong) NSArray<IMChartData *> *dataArray;
 /** 显示数据的字体 */
 @property (nonatomic, copy) UIFont *dataFont;
+/** 显示数据保留的小数位数 */
+@property (nonatomic, assign) IBInspectable int fractionalDigits;
 /** 正值颜色 */
 @property (nonatomic, copy) IBInspectable UIColor *positiveColor;
 /** 负值颜色 */
@@ -32,7 +34,7 @@
 @property (nonatomic, copy) UIFont *timeFont;
 /** 描述文字颜色(时间也用此色) */
 @property (nonatomic, copy) IBInspectable UIColor *descColor;
-/** 描述集合，当此值不为nil或empty时，则绘制描述 */
+/** 描述集合，当此值不为nil或empty且元素数量>=dataArray.count时，则绘制描述 */
 @property (nonatomic, strong) NSArray<NSString *> *descArray;
 /** 显示描述的字体 */
 @property (nonatomic, copy) UIFont *descFont;
