@@ -8,7 +8,7 @@
 
 #import "IMChartScrollView.h"
 #import "IMLineChartView.h"
-#import "IMColumnChartView.h"
+#import "IMTrendColumnChartView.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Masonry/Masonry.h>
 #import "UIView+IMRect.h"
@@ -80,7 +80,7 @@ typedef void(^BeginGrBlock)(void);
         make.leading.mas_equalTo(0);
         make.trailing.mas_equalTo(0);
     }];
-    _columnChartView = [[IMColumnChartView alloc] init];
+    _columnChartView = [[IMTrendColumnChartView alloc] init];
     [_contentView addSubview:_columnChartView];
     @weakify(self);
     [_columnChartView mas_makeConstraints:^(MASConstraintMaker *make) {

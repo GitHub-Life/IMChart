@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 @class IMLineChartView;
-@class IMColumnChartView;
+@class IMTrendColumnChartView;
 
 @interface IMChartScrollView : UIScrollView
 
 @property (nonatomic, strong) IMLineChartView *lineChartView;
-@property (nonatomic, strong) IMColumnChartView *columnChartView;
+@property (nonatomic, strong) IMTrendColumnChartView *columnChartView;
 
 @property (nonatomic, assign) CGFloat contentWidth;
 @property (nonatomic, assign) CGFloat drawAreaWidth;

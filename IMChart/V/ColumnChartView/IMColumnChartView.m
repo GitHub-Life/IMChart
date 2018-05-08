@@ -1,23 +1,27 @@
 //
 //  IMColumnChartView.m
-//  IMChartDemo
+//  NiuYan
 //
-//  Created by 万涛 on 2018/3/26.
-//  Copyright © 2018年 iMoon. All rights reserved.
+//  Created by 万涛 on 2018/5/2.
+//  Copyright © 2018年 niuyan.com. All rights reserved.
 //
 
 #import "IMColumnChartView.h"
-#import "IMChartDataGroup.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "IMColumnChartPainer.h"
+#import "UIView+IMRect.h"
+#import "IMChartData.h"
 #import "IMChartPoint.h"
 
 @interface IMColumnChartView ()
-
-/** X轴方向 单位宽度 */
+/** x轴方向 单位宽度 */
 @property (nonatomic, assign) CGFloat unitX;
 
-@property (nonatomic, strong) NSArray<IMChartData *> *drawDataArray;
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
+
+@property (nonatomic, strong) NSNumberFormatter *numberFormatter;
+
+@property (nonatomic, assign) CGFloat extendLeft;
+@property (nonatomic, assign) CGFloat extendRight;
 
 @end
 
@@ -25,69 +29,50 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        [self initSetting];
+        [self initView];
+        [self initBind];
     }
     return self;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
     if (self = [super initWithCoder:coder]) {
-        [self initSetting];
+        [self initView];
+        [self initBind];
     }
     return self;
 }
 
-- (void)initSetting {
-    _yReferenceCount = 2;
-    _hideYReference = NO;
-    _coordAxisColor = [UIColor lightGrayColor];
-    _columnColor = [UIColor darkGrayColor];
-    _dataGroup = [[IMChartDataGroup alloc] init];
-    @weakify(self);
-    [RACObserve(self.dataGroup, dataArray) subscribeNext:^(id x) {
-        @strongify(self);
-        [self draw];
-    }];
-    [RACObserve(self, drawBeginOffsetX) subscribeNext:^(id x) {
-        @strongify(self);
-        [self draw];
-    }];
-}
-
-- (void)didMoveToSuperview {
-    [super didMoveToSuperview];
+- (void)initView {
     self.backgroundColor = [UIColor clearColor];
+    self.clipsToBounds = NO;
+    _coordAxisColor = [UIColor lightGrayColor];
+    _dataFont = [UIFont systemFontOfSize:10];
+    _timeFont = [UIFont systemFontOfSize:10];
+    _descFont = [UIFont systemFontOfSize:10];
+    _descColor = [UIColor darkGrayColor];
+    _dateFormatter = [[NSDateFormatter alloc] init];
+    _dateFormat = @"MM-dd";
+    _numberFormatter = [[NSNumberFormatter alloc] init];
+    _numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+    _numberFormatter.groupingSeparator = @"";
 }
 
-- (void)drawRect:(CGRect)rect {
-    [super drawRect:rect];
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextClearRect(context, rect);
-    CGFloat width = CGRectGetWidth(rect);
-    CGFloat height = CGRectGetHeight(rect);
-    
-    if (!_hideYReference && _yReferenceCount > 1) {
-        // 绘制Y轴参考虚线
-        CGFloat step = height / (_yReferenceCount - 1);
-        CGContextSetLineWidth(context, 0.5);
-        CGContextSetStrokeColorWithColor(context, _coordAxisColor.CGColor);
-        CGContextBeginPath(context);
-        for (int i = 0; i < _yReferenceCount; i++) {
-            CGContextMoveToPoint(context, 0, i * step);
-            CGContextAddLineToPoint(context, width, i * step);
-        }
-        CGContextStrokePath(context);
-    }
-    
-    if (_drawDataArray.count == 0) {
-        return;
-    }
-    
-    CGContextSetLineWidth(context, _unitX);
-    CGContextSetStrokeColorWithColor(context, _columnColor.CGColor);
-    [[[IMColumnChartPainer alloc] init] drawWithDataArray:_drawDataArray context:context];
-    
+- (void)initBind {
+    @weakify(self);
+    [RACObserve(self, dataArray) subscribeNext:^(id x) {
+        @strongify(self);
+        [self draw];
+    }];
+    [RACObserve(self, dateFormat) subscribeNext:^(id x) {
+        @strongify(self);
+        self.dateFormatter.dateFormat = x;
+    }];
+    [RACObserve(self, fractionalDigits) subscribeNext:^(id x) {
+        @strongify(self);
+        self.numberFormatter.maximumFractionDigits = [x unsignedIntegerValue];
+        self.numberFormatter.minimumFractionDigits = [x unsignedIntegerValue];
+    }];
 }
 
 - (void)draw {
@@ -96,44 +81,148 @@
 }
 
 - (void)setDatasPosition {
-    if (_dataGroup.dataArray.count == 0) {
+    if (_extendLeft || _extendRight) {
+        self.bounds = CGRectMake(_extendLeft, 0, -_extendLeft + self.width - _extendRight, self.height);
+        _extendLeft = _extendRight = 0;
+    }
+    if (_dataArray.count == 0) {
         return;
     }
+    _unitX = (self.width - _chartEdgeInsets.left - _chartEdgeInsets.right) / (_dataArray.count * 2 - 1);
     
-    _unitX = self.frame.size.width / (_dataGroup.dataArray.count * 2 - 1);
-    
-    NSInteger beginIndex = MAX(_drawBeginOffsetX / (_unitX * 2), 0);
-    NSInteger endIndex = MIN((_drawBeginOffsetX + _drawAreaWidth) / (_unitX * 2) + 1, _dataGroup.dataArray.count - 1);
-    if (beginIndex > endIndex) {
-        beginIndex = 0;
-    }
-    _drawDataArray = [_dataGroup.dataArray subarrayWithRange:NSMakeRange(beginIndex, endIndex - beginIndex)];
-    
-    CGFloat maxValue = _drawDataArray.firstObject.columeValue.doubleValue;
-    CGFloat minValue = _drawDataArray.firstObject.columeValue.doubleValue;
-    for (IMChartData *data in _drawDataArray) {
-        if (data.columeValue.doubleValue > maxValue) {
-            maxValue = data.columeValue.doubleValue;
-        }
-        if (data.columeValue.doubleValue < minValue) {
-            minValue = data.columeValue.doubleValue;
+    CGFloat maxValue = _dataArray.firstObject.columnValue.doubleValue;
+    CGFloat minValue = 0;
+    for (IMChartData *data in _dataArray) {
+        CGFloat value = data.columnValue.doubleValue;
+        if (value > maxValue) {
+            maxValue = value;
         }
     }
     
-    CGFloat diff = (maxValue - minValue) * 0.05;
-    maxValue += diff;
-    minValue -= diff;
+    CGFloat minY = _chartEdgeInsets.top;
+    CGFloat maxY = self.height - _chartEdgeInsets.bottom;
+    CGFloat unitY = (maxValue - minValue) / (maxY - minY);
     
-    CGFloat minY = 0;
-    CGFloat maxY = self.frame.size.height;
-    CGFloat unitValue = (maxValue - minValue) / (maxY - minY);
+    for (int i = 0; i < _dataArray.count; i++) {
+        IMChartData *data = _dataArray[i];
+        CGFloat num = data.columnValue.doubleValue;
+        CGFloat xPosition = _chartEdgeInsets.left + _unitX / 2 + i * (_unitX * 2);
+        IMChartPoint *dataPoint = [IMChartPoint point:xPosition :(unitY > 0 ? (maxY - ((num - minValue) / unitY)) : maxY)];
+        dataPoint.dataYzeroPoint = [IMChartPoint point:xPosition :(unitY > 0 ? (maxY - (-minValue / unitY)) : maxY)];
+        dataPoint.index = i;
+        data.columnPoint = dataPoint;
+    }
     
-    for (int i = 0; i < _drawDataArray.count; i++) {
-        IMChartData *data = _drawDataArray[i];
-        CGFloat xPosition = (beginIndex + i) * _unitX * 2;
-        IMChartPoint *columnPoint = [IMChartPoint point:xPosition :maxY - (unitValue > 0 ? ((data.columeValue.doubleValue - minValue) / unitValue) : 0)];
-        columnPoint.dataYzeroPoint = [IMChartPoint point:xPosition :maxY];
-        data.columnPoint = columnPoint;
+    if (_chartEdgeInsets.left < _unitX / 2 || _chartEdgeInsets.right < _unitX / 2) {
+        _extendLeft = 0;
+        if (_chartEdgeInsets.left < _unitX / 2) {
+            _extendLeft = _unitX / 2 - _chartEdgeInsets.left;
+        }
+        _extendRight = 0;
+        if (_chartEdgeInsets.right < _unitX / 2) {
+            _extendRight = _unitX / 2 - _chartEdgeInsets.right;
+        }
+        self.bounds = CGRectMake(-_extendLeft, 0, _extendLeft + self.width + _extendRight, self.height);
+    }
+}
+
+- (UIColor *)getColumnColorWithIndex:(NSInteger)index {
+    if (!_columnColorArray || !_columnColorArray.count) {
+        return [UIColor blueColor];
+    }
+    return _columnColorArray[index % _columnColorArray.count];
+}
+
+- (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextClearRect(context, rect);
+    
+    if (_dataArray.count == 0) {
+        return;
+    }
+    // 绘制X轴
+    CGContextSetLineWidth(context, 0.5);
+    CGContextSetStrokeColorWithColor(context, _coordAxisColor.CGColor);
+    CGContextMoveToPoint(context, 0, _dataArray.firstObject.columnPoint.dataYzeroPoint.y);
+    CGContextAddLineToPoint(context, self.width, _dataArray.firstObject.columnPoint.dataYzeroPoint.y);
+    CGContextStrokePath(context);
+    
+    // 绘制柱状 / 数据 / 描述
+    BOOL drawDesc = (_descArray && _descArray.count >= _dataArray.count);
+    BOOL drawDataText = (_dataTextArray && _dataTextArray.count >= _dataArray.count);
+    CGContextSetLineWidth(context, _unitX);
+    // 确定绘制数据的字体大小，使之不超过绘制区域，相互之间不重合
+    for (int i = 0; i < _dataArray.count; i++) {
+        NSString *text = drawDataText ? _dataTextArray[i] : [_numberFormatter stringFromNumber:_dataArray[i].columnValue];
+        CGSize textSize = [text sizeWithAttributes:@{NSFontAttributeName : _dataFont}];
+        CGFloat dataDrawWidth = (i==0 ? _unitX*1.5+_chartEdgeInsets.left : (i<_dataArray.count-1 ? _unitX*2 : _unitX*1.5+_chartEdgeInsets.right));
+        CGFloat dataFontSize = _dataFont.pointSize;
+        while (textSize.width > dataDrawWidth) {
+            dataFontSize -= 1;
+            textSize = [text sizeWithAttributes:@{NSFontAttributeName : [UIFont fontWithName:_dataFont.fontName size:dataFontSize]}];
+        }
+        _dataFont = [UIFont fontWithName:_dataFont.fontName size:dataFontSize];
+        
+        if (drawDesc && _descAdjustsFontSizeToFitWidth) {
+            CGSize descSize = [_descArray[i] sizeWithAttributes:@{NSFontAttributeName : _descFont}];
+            CGFloat descFontSize = _descFont.pointSize;
+            while (descSize.width > dataDrawWidth) {
+                descFontSize -= 1;
+                descSize = [_descArray[i] sizeWithAttributes:@{NSFontAttributeName : [UIFont fontWithName:_descFont.fontName size:descFontSize]}];
+            }
+            _descFont = [UIFont fontWithName:_descFont.fontName size:descFontSize];
+        }
+        
+        if (_drawTime) {
+            NSString *timeStr = [_dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:_dataArray[i].timeStamp]];
+            CGSize timeSize = [timeStr sizeWithAttributes:@{NSFontAttributeName : _timeFont}];
+            CGFloat timeFontSize = _timeFont.pointSize;
+            while (timeSize.width > dataDrawWidth) {
+                timeFontSize -= 1;
+                timeSize = [timeStr sizeWithAttributes:@{NSFontAttributeName : [UIFont fontWithName:_timeFont.fontName size:timeFontSize]}];
+            }
+            _timeFont = [UIFont fontWithName:_timeFont.fontName size:timeFontSize];
+        }
+    }
+    // 开始绘制
+    for (int i = 0; i < _dataArray.count; i++) {
+        IMChartData *data = _dataArray[i];
+        UIColor *color = [self getColumnColorWithIndex:i];
+        CGContextSetStrokeColorWithColor(context, color.CGColor);
+        // 绘制柱状
+        CGPoint zeroPoint = data.columnPoint.dataYzeroPoint.cgPoint;
+        CGPoint valuePoint = data.columnPoint.cgPoint;
+        CGContextMoveToPoint(context, zeroPoint.x, zeroPoint.y);
+        CGContextAddLineToPoint(context, valuePoint.x, valuePoint.y);
+        CGContextStrokePath(context);
+        // 绘制数据
+        NSString *text = drawDataText ? _dataTextArray[i] : [_numberFormatter stringFromNumber:_dataArray[i].columnValue];
+        CGSize textSize = [text sizeWithAttributes:@{NSFontAttributeName : _dataFont}];
+        CGFloat textOffset =  -(textSize.height + 4);
+        CGPoint textAtPoint = CGPointMake(valuePoint.x - textSize.width / 2, valuePoint.y + textOffset);
+        [text drawAtPoint:textAtPoint withAttributes:@{NSFontAttributeName : _dataFont, NSForegroundColorAttributeName : color}];
+        
+        // 绘制描述
+        CGFloat descHeight = 0;
+        if (drawDesc) {
+            CGSize descSize = [_descArray[i] sizeWithAttributes:@{NSFontAttributeName : _descFont}];
+            if (descSize.width < _unitX * 2) {
+                CGPoint descAtPoint = CGPointMake(zeroPoint.x - descSize.width / 2, self.height - descSize.height);
+                [_descArray[i] drawAtPoint:descAtPoint withAttributes:@{NSFontAttributeName : _descFont, NSForegroundColorAttributeName : _descColor}];
+            } else {
+                [_descArray[i] drawWithRect:CGRectMake(zeroPoint.x - _unitX, self.height - descSize.height, _unitX * 2, descSize.height) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingTruncatesLastVisibleLine attributes:@{NSFontAttributeName : _descFont, NSForegroundColorAttributeName : _descColor} context:nil];
+            }
+            descHeight = descSize.height + 3;
+        }
+        // 绘制时间
+        if (_drawTime) {
+            NSString *timeStr = [_dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:data.timeStamp]];
+            CGSize timeSize = [timeStr sizeWithAttributes:@{NSFontAttributeName : _timeFont}];
+            CGPoint timeAtPoint = CGPointMake(zeroPoint.x - timeSize.width / 2, self.height - descHeight - timeSize.height);
+            [timeStr drawAtPoint:timeAtPoint withAttributes:@{NSFontAttributeName : _timeFont, NSForegroundColorAttributeName : _descColor}];
+        }
     }
 }
 

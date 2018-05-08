@@ -15,7 +15,7 @@
     for (NSArray *dataDict in responseDatas) {
         IMChartData *data = [[IMChartData alloc] init];
         data.lineValues = @[dataDict[4], dataDict[1], dataDict[2]];
-        data.columeValue = dataDict[3];
+        data.columnValue = dataDict[3];
         data.timeStamp = [dataDict[0] doubleValue];
         [dataArray addObject:data];
     }

@@ -44,7 +44,7 @@
     return _chartScrollView.lineChartView;
 }
     
-- (IMColumnChartView *)columnChartView {
+- (IMTrendColumnChartView *)columnChartView {
     return _chartScrollView.columnChartView;
 }
     

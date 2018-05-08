@@ -13,6 +13,8 @@
 
 /** 数据 */
 @property (nonatomic, strong) NSArray<IMChartData *> *dataArray;
+/** 数据文本(当此值为nil或count<dataArray.count时,则显示dataArray中的columnValue) */
+@property (nonatomic, strong) NSArray<NSString *> *dataTextArray;
 /** 显示数据的字体 */
 @property (nonatomic, copy) UIFont *dataFont;
 /** 显示数据保留的小数位数 */

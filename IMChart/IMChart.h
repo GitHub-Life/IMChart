@@ -14,7 +14,9 @@
 #import "IMChartTimeLineView.h"
 #import "IMChartChooseView.h"
 #import "IMLineChartView.h"
-#import "IMColumnChartView.h"
+#import "IMTrendColumnChartView.h"
 #import "IMChartScrollView.h"
+#import "IMBothColumnChartView.h"
+#import "IMColumnChartView.h"
 
 #endif /* IMChart_h */

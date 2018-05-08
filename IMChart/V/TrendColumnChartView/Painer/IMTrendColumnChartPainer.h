@@ -1,5 +1,5 @@
 //
-//  IMColumnChartPainer.h
+//  IMTrendColumnChartPainer.h
 //  IMChartDemo
 //
 //  Created by 万涛 on 2018/3/26.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class IMChartData;
 
-@interface IMColumnChartPainer : NSObject
+@interface IMTrendColumnChartPainer : NSObject
 
 - (void)drawWithDataArray:(NSArray<IMChartData *> *)dataArray context:(CGContextRef)context;
 

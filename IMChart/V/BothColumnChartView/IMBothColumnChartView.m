@@ -18,6 +18,11 @@
 
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 
+@property (nonatomic, strong) NSNumberFormatter *numberFormatter;
+
+@property (nonatomic, assign) CGFloat extendLeft;
+@property (nonatomic, assign) CGFloat extendRight;
+
 @end
 
 @implementation IMBothColumnChartView
@@ -50,6 +55,9 @@
     _descColor = [UIColor darkGrayColor];
     _dateFormatter = [[NSDateFormatter alloc] init];
     _dateFormat = @"MM-dd";
+    _numberFormatter = [[NSNumberFormatter alloc] init];
+    _numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+    _numberFormatter.groupingSeparator = @"";
 }
 
 - (void)initBind {
@@ -62,6 +70,11 @@
         @strongify(self);
         self.dateFormatter.dateFormat = x;
     }];
+    [RACObserve(self, fractionalDigits) subscribeNext:^(id x) {
+        @strongify(self);
+        self.numberFormatter.maximumFractionDigits = [x unsignedIntegerValue];
+        self.numberFormatter.minimumFractionDigits = [x unsignedIntegerValue];
+    }];
 }
 
 - (void)draw {
@@ -70,15 +83,19 @@
 }
 
 - (void)setDatasPosition {
+    if (_extendLeft || _extendRight) {
+        self.bounds = CGRectMake(_extendLeft, 0, -_extendLeft + self.width - _extendRight, self.height);
+        _extendLeft = _extendRight = 0;
+    }
     if (_dataArray.count == 0) {
         return;
     }
     _unitX = (self.width - _chartEdgeInsets.left - _chartEdgeInsets.right) / (_dataArray.count * 2 - 1);
     
-    CGFloat maxValue = _dataArray.firstObject.columeValue.doubleValue;
-    CGFloat minValue = _dataArray.firstObject.columeValue.doubleValue;
+    CGFloat maxValue = _dataArray.firstObject.columnValue.doubleValue;
+    CGFloat minValue = _dataArray.firstObject.columnValue.doubleValue;
     for (IMChartData *data in _dataArray) {
-        CGFloat value = data.columeValue.doubleValue;
+        CGFloat value = data.columnValue.doubleValue;
         if (value > maxValue) {
             maxValue = value;
         }
@@ -98,7 +115,7 @@
     
     for (int i = 0; i < _dataArray.count; i++) {
         IMChartData *data = _dataArray[i];
-        CGFloat num = data.columeValue.doubleValue;
+        CGFloat num = data.columnValue.doubleValue;
         CGFloat xPosition = _chartEdgeInsets.left + _unitX / 2 + i * (_unitX * 2);
         IMChartPoint *dataPoint = [IMChartPoint point:xPosition :(unitY > 0 ? (maxY - ((num - minValue) / unitY)) : maxY)];
         dataPoint.dataYzeroPoint = [IMChartPoint point:xPosition :(unitY > 0 ? (maxY - (-minValue / unitY)) : maxY)];
@@ -107,15 +124,15 @@
     }
     
     if (_chartEdgeInsets.left < _unitX / 2 || _chartEdgeInsets.right < _unitX / 2) {
-        CGFloat left = 0;
+        _extendLeft = 0;
         if (_chartEdgeInsets.left < _unitX / 2) {
-            left = _unitX / 2 - _chartEdgeInsets.left;
+            _extendLeft = _unitX / 2 - _chartEdgeInsets.left;
         }
-        CGFloat right = 0;
+        _extendRight = 0;
         if (_chartEdgeInsets.right < _unitX / 2) {
-            right = _unitX / 2 - _chartEdgeInsets.right;
+            _extendRight = _unitX / 2 - _chartEdgeInsets.right;
         }
-        self.bounds = CGRectMake(-left, 0, left + self.width + right, self.height);
+        self.bounds = CGRectMake(-_extendLeft, 0, _extendLeft + self.width + _extendRight, self.height);
     }
 }
 
@@ -137,15 +154,11 @@
     
     // 绘制柱状 / 数据 / 描述
     BOOL drawDesc = (_descArray && _descArray.count >= _dataArray.count);
+    BOOL drawDataText = (_dataTextArray && _dataTextArray.count >= _dataArray.count);
     CGContextSetLineWidth(context, _unitX);
-    NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
-    nf.numberStyle = NSNumberFormatterDecimalStyle;
-    nf.groupingSeparator = @"";
-    nf.maximumFractionDigits = _fractionalDigits;
-    nf.minimumFractionDigits = _fractionalDigits;
     // 确定绘制数据的字体大小，使之不超过绘制区域，相互之间不重合
     for (int i = 0; i < _dataArray.count; i++) {
-        NSString *text = [nf stringFromNumber:_dataArray[i].columeValue];
+        NSString *text = drawDataText ? _dataTextArray[i] : [_numberFormatter stringFromNumber:_dataArray[i].columnValue];
         CGSize textSize = [text sizeWithAttributes:@{NSFontAttributeName : _dataFont}];
         CGFloat dataDrawWidth = (i==0 ? _unitX*1.5+_chartEdgeInsets.left : (i<_dataArray.count-1 ? _unitX*2 : _unitX*1.5+_chartEdgeInsets.right));
         CGFloat dataFontSize = _dataFont.pointSize;
@@ -160,7 +173,7 @@
             CGFloat descFontSize = _descFont.pointSize;
             while (descSize.width > dataDrawWidth) {
                 descFontSize -= 1;
-                descSize = [text sizeWithAttributes:@{NSFontAttributeName : [UIFont fontWithName:_descFont.fontName size:descFontSize]}];
+                descSize = [_descArray[i] sizeWithAttributes:@{NSFontAttributeName : [UIFont fontWithName:_descFont.fontName size:descFontSize]}];
             }
             _descFont = [UIFont fontWithName:_descFont.fontName size:descFontSize];
         }
@@ -171,16 +184,15 @@
             CGFloat timeFontSize = _timeFont.pointSize;
             while (timeSize.width > dataDrawWidth) {
                 timeFontSize -= 1;
-                timeSize = [text sizeWithAttributes:@{NSFontAttributeName : [UIFont fontWithName:_timeFont.fontName size:timeFontSize]}];
+                timeSize = [timeStr sizeWithAttributes:@{NSFontAttributeName : [UIFont fontWithName:_timeFont.fontName size:timeFontSize]}];
             }
             _timeFont = [UIFont fontWithName:_timeFont.fontName size:timeFontSize];
         }
     }
-    
     // 开始绘制
     for (int i = 0; i < _dataArray.count; i++) {
         IMChartData *data = _dataArray[i];
-        CGFloat num = data.columeValue.doubleValue;
+        CGFloat num = data.columnValue.doubleValue;
         BOOL isPositive = num < 0;
         UIColor *color = (isPositive ? _negativeColor : _positiveColor);
         CGContextSetStrokeColorWithColor(context, color.CGColor);
@@ -191,7 +203,7 @@
         CGContextAddLineToPoint(context, valuePoint.x, valuePoint.y);
         CGContextStrokePath(context);
         // 绘制数据
-        NSString *text = [nf stringFromNumber:_dataArray[i].columeValue];
+        NSString *text = drawDataText ? _dataTextArray[i] : [_numberFormatter stringFromNumber:_dataArray[i].columnValue];
         CGSize textSize = [text sizeWithAttributes:@{NSFontAttributeName : _dataFont}];
         CGFloat textOffset = (isPositive ? -(textSize.height + 5) : 5);
         CGPoint textAtPoint = CGPointMake(zeroPoint.x - textSize.width / 2, zeroPoint.y + textOffset);

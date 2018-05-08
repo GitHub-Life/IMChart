@@ -7,12 +7,12 @@
 //
 
 #import "ViewController1.h"
-#import "IMBothColumnChartView.h"
-#import "IMChartData.h"
+#import "IMChart.h"
 
 @interface ViewController1 ()
 
 @property (weak, nonatomic) IBOutlet IMBothColumnChartView *bothColumnChartView;
+@property (weak, nonatomic) IBOutlet IMColumnChartView *columnChartView;
 
 @end
 
@@ -23,21 +23,25 @@
     _bothColumnChartView.chartEdgeInsets = UIEdgeInsetsMake(10, 20, 30, 20);
     _bothColumnChartView.drawTime = YES;
     _bothColumnChartView.descArray = @[@"DESC1", @"DESC2", @"DESC3", @"DESC4", @"DESC5", @"DESC6"];
+    
+    _columnChartView.chartEdgeInsets = UIEdgeInsetsMake(20, 20, 30, 20);
+    _columnChartView.drawTime = YES;
+    _columnChartView.descArray = @[@"DESC1", @"DESC2", @"DESC3", @"DESC4", @"DESC5", @"DESC6"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSMutableArray<IMChartData *> *datas = [NSMutableArray array];
+    NSMutableArray<IMChartData *> *bothColumnDatas = [NSMutableArray array];
+    NSMutableArray<IMChartData *> *columnDatas = [NSMutableArray array];
     NSTimeInterval timeStmap = 1524000000;
     for (int i = 0; i < 6; i++) {
         timeStmap += 86400;
-        IMChartData *data = [[IMChartData alloc] init];
         int random = arc4random() % 100;
-        data.columeValue = arc4random() % 2 ? @(random) : @(-random);
-        data.timeStamp = timeStmap;
-        [datas addObject:data];
+        [bothColumnDatas addObject:[[IMChartData alloc] initWithColumnValue:(arc4random() % 2 ? @(random) : @(-random)) timeStamp:timeStmap]];
+        [columnDatas addObject:[[IMChartData alloc] initWithColumnValue:@(random) timeStamp:timeStmap]];
     }
-    _bothColumnChartView.dataArray = datas;
+    _bothColumnChartView.dataArray = bothColumnDatas;
+    _columnChartView.dataArray = columnDatas;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

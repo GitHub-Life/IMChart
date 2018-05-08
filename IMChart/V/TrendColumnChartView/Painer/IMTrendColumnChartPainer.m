@@ -1,16 +1,16 @@
 //
-//  IMColumnChartPainer.m
+//  IMTrendColumnChartPainer.m
 //  IMChartDemo
 //
 //  Created by 万涛 on 2018/3/26.
 //  Copyright © 2018年 iMoon. All rights reserved.
 //
 
-#import "IMColumnChartPainer.h"
+#import "IMTrendColumnChartPainer.h"
 #import "IMChartData.h"
 #import "IMChartPoint.h"
 
-@implementation IMColumnChartPainer
+@implementation IMTrendColumnChartPainer
 
 - (void)drawWithDataArray:(NSArray<IMChartData *> *)dataArray context:(CGContextRef)context {
     CGContextBeginPath(context);
