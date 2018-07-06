@@ -35,6 +35,14 @@
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self initView];
+        [self initBind];
+    }
+    return self;
+}
+
 - (instancetype)initWithCoder:(NSCoder *)coder {
     if (self = [super initWithCoder:coder]) {
         [self initView];
@@ -64,7 +72,8 @@
     @weakify(self);
     [RACObserve(self, dataArray) subscribeNext:^(id x) {
         @strongify(self);
-        [self draw];
+        [self setDatasPosition];
+        [self setNeedsDisplay];
     }];
     [RACObserve(self, dateFormat) subscribeNext:^(id x) {
         @strongify(self);
@@ -75,11 +84,6 @@
         self.numberFormatter.maximumFractionDigits = [x unsignedIntegerValue];
         self.numberFormatter.minimumFractionDigits = [x unsignedIntegerValue];
     }];
-}
-
-- (void)draw {
-    [self setDatasPosition];
-    [self setNeedsDisplay];
 }
 
 - (void)setDatasPosition {
@@ -117,8 +121,8 @@
         IMChartData *data = _dataArray[i];
         CGFloat num = data.columnValue.doubleValue;
         CGFloat xPosition = _chartEdgeInsets.left + _unitX / 2 + i * (_unitX * 2);
-        IMChartPoint *dataPoint = [IMChartPoint point:xPosition :(unitY > 0 ? (maxY - ((num - minValue) / unitY)) : maxY)];
-        dataPoint.dataYzeroPoint = [IMChartPoint point:xPosition :(unitY > 0 ? (maxY - (-minValue / unitY)) : maxY)];
+        IMChartPoint *dataPoint = [IMChartPoint point:xPosition :(unitY > 0 ? (maxY - ((num - minValue) / unitY)) : (maxY + minY) / 2)];
+        dataPoint.dataYzeroPoint = [IMChartPoint point:xPosition :(unitY > 0 ? (maxY - (-minValue / unitY)) : (maxY + minY) / 2)];
         dataPoint.index = i;
         data.columnPoint = dataPoint;
     }
@@ -138,19 +142,23 @@
 
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
-    
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextClearRect(context, rect);
-    
+
     if (_dataArray.count == 0) {
         return;
     }
     // 绘制X轴
-    CGContextSetLineWidth(context, 0.5);
-    CGContextSetStrokeColorWithColor(context, _coordAxisColor.CGColor);
-    CGContextMoveToPoint(context, 0, _dataArray.firstObject.columnPoint.dataYzeroPoint.y);
-    CGContextAddLineToPoint(context, self.width, _dataArray.firstObject.columnPoint.dataYzeroPoint.y);
-    CGContextStrokePath(context);
+//    CGContextSetLineWidth(context, 0.5);
+//    CGContextSetStrokeColorWithColor(context, _coordAxisColor.CGColor);
+//    CGContextMoveToPoint(context, 0, _dataArray.firstObject.columnPoint.dataYzeroPoint.y);
+//    CGContextAddLineToPoint(context, self.width - _extendLeft - _extendRight, _dataArray.firstObject.columnPoint.dataYzeroPoint.y);
+//    CGContextStrokePath(context);
+    
+    CAShapeLayer *xAxisLayer = [CAShapeLayer layer];
+    xAxisLayer.frame = CGRectMake(0, _dataArray.firstObject.columnPoint.dataYzeroPoint.y, self.width - _extendLeft - _extendRight, 0.5);
+    [xAxisLayer setBackgroundColor:_coordAxisColor.CGColor];
+    [self.layer addSublayer:xAxisLayer];
     
     // 绘制柱状 / 数据 / 描述
     BOOL drawDesc = (_descArray && _descArray.count >= _dataArray.count);
@@ -208,7 +216,6 @@
         CGFloat textOffset = (isPositive ? -(textSize.height + 5) : 5);
         CGPoint textAtPoint = CGPointMake(zeroPoint.x - textSize.width / 2, zeroPoint.y + textOffset);
         [text drawAtPoint:textAtPoint withAttributes:@{NSFontAttributeName : _dataFont, NSForegroundColorAttributeName : color}];
-        
         // 绘制描述
         CGFloat descHeight = 0;
         if (drawDesc) {

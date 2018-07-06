@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B75111F220A1970700D93B18 /* IMChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111CD20A1970700D93B18 /* IMChartData.m */; };
-		B75111F320A1970700D93B18 /* IMChartPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111CE20A1970700D93B18 /* IMChartPoint.m */; };
-		B75111F420A1970700D93B18 /* IMChartDataGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111CF20A1970700D93B18 /* IMChartDataGroup.m */; };
-		B75111F520A1970700D93B18 /* IMChartRightTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111D620A1970700D93B18 /* IMChartRightTipView.m */; };
-		B75111F620A1970700D93B18 /* IMSmoothedLineChartPainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111DB20A1970700D93B18 /* IMSmoothedLineChartPainer.m */; };
-		B75111F720A1970700D93B18 /* IMLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111DC20A1970700D93B18 /* IMLineChartView.m */; };
-		B75111F820A1970700D93B18 /* IMChartScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111DF20A1970700D93B18 /* IMChartScrollView.m */; };
-		B75111F920A1970700D93B18 /* IMColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111E120A1970700D93B18 /* IMColumnChartView.m */; };
-		B75111FA20A1970700D93B18 /* IMChartTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111E520A1970700D93B18 /* IMChartTimeLineView.m */; };
-		B75111FB20A1970700D93B18 /* IMBothColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111E820A1970700D93B18 /* IMBothColumnChartView.m */; };
-		B75111FC20A1970700D93B18 /* IMTrendColumnChartPainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111EC20A1970700D93B18 /* IMTrendColumnChartPainer.m */; };
-		B75111FD20A1970700D93B18 /* IMTrendColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111EE20A1970700D93B18 /* IMTrendColumnChartView.m */; };
-		B75111FE20A1970700D93B18 /* IMChartChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B75111F120A1970700D93B18 /* IMChartChooseView.m */; };
+		B70796FC20EF676200195A65 /* IMChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796D720EF676200195A65 /* IMChartData.m */; };
+		B70796FD20EF676200195A65 /* IMChartPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796D820EF676200195A65 /* IMChartPoint.m */; };
+		B70796FE20EF676200195A65 /* IMChartDataGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796D920EF676200195A65 /* IMChartDataGroup.m */; };
+		B70796FF20EF676200195A65 /* IMChartRightTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796E020EF676200195A65 /* IMChartRightTipView.m */; };
+		B707970020EF676200195A65 /* IMSmoothedLineChartPainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796E520EF676200195A65 /* IMSmoothedLineChartPainer.m */; };
+		B707970120EF676200195A65 /* IMLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796E620EF676200195A65 /* IMLineChartView.m */; };
+		B707970220EF676200195A65 /* IMChartScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796E920EF676200195A65 /* IMChartScrollView.m */; };
+		B707970320EF676200195A65 /* IMColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796EB20EF676200195A65 /* IMColumnChartView.m */; };
+		B707970420EF676200195A65 /* IMChartTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796EF20EF676200195A65 /* IMChartTimeLineView.m */; };
+		B707970520EF676200195A65 /* IMBothColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796F220EF676200195A65 /* IMBothColumnChartView.m */; };
+		B707970620EF676200195A65 /* IMTrendColumnChartPainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796F620EF676200195A65 /* IMTrendColumnChartPainer.m */; };
+		B707970720EF676200195A65 /* IMTrendColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796F820EF676200195A65 /* IMTrendColumnChartView.m */; };
+		B707970820EF676200195A65 /* IMChartChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796FB20EF676200195A65 /* IMChartChooseView.m */; };
 		B76276D920871F500033BD8E /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = B76276D820871F500033BD8E /* ViewController1.m */; };
 		B7A5BD4020846F390033D998 /* UIView+IMRect.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD2920846F390033D998 /* UIView+IMRect.m */; };
 		B7A5BD4120846F390033D998 /* IMChartData+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD2C20846F390033D998 /* IMChartData+Parse.m */; };
@@ -44,33 +44,33 @@
 		1383C607B15683410F540827 /* Pods-IMChartDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChartDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMChartDemo/Pods-IMChartDemo.release.xcconfig"; sourceTree = "<group>"; };
 		3D77293E09D0E5EB754035BB /* Pods-IMChartDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMChartDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMChartDemo/Pods-IMChartDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5B8182CEF7DAE0360C2D67E3 /* Pods_IMChartDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMChartDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B75111CB20A1970700D93B18 /* IMChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChart.h; sourceTree = "<group>"; };
-		B75111CD20A1970700D93B18 /* IMChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartData.m; sourceTree = "<group>"; };
-		B75111CE20A1970700D93B18 /* IMChartPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartPoint.m; sourceTree = "<group>"; };
-		B75111CF20A1970700D93B18 /* IMChartDataGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartDataGroup.m; sourceTree = "<group>"; };
-		B75111D020A1970700D93B18 /* IMChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartData.h; sourceTree = "<group>"; };
-		B75111D120A1970700D93B18 /* IMChartPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartPoint.h; sourceTree = "<group>"; };
-		B75111D220A1970700D93B18 /* IMChartDataGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartDataGroup.h; sourceTree = "<group>"; };
-		B75111D520A1970700D93B18 /* IMChartRightTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartRightTipView.h; sourceTree = "<group>"; };
-		B75111D620A1970700D93B18 /* IMChartRightTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartRightTipView.m; sourceTree = "<group>"; };
-		B75111D820A1970700D93B18 /* IMLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMLineChartView.h; sourceTree = "<group>"; };
-		B75111DA20A1970700D93B18 /* IMSmoothedLineChartPainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSmoothedLineChartPainer.h; sourceTree = "<group>"; };
-		B75111DB20A1970700D93B18 /* IMSmoothedLineChartPainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSmoothedLineChartPainer.m; sourceTree = "<group>"; };
-		B75111DC20A1970700D93B18 /* IMLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMLineChartView.m; sourceTree = "<group>"; };
-		B75111DE20A1970700D93B18 /* IMChartScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartScrollView.h; sourceTree = "<group>"; };
-		B75111DF20A1970700D93B18 /* IMChartScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartScrollView.m; sourceTree = "<group>"; };
-		B75111E120A1970700D93B18 /* IMColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMColumnChartView.m; sourceTree = "<group>"; };
-		B75111E220A1970700D93B18 /* IMColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMColumnChartView.h; sourceTree = "<group>"; };
-		B75111E420A1970700D93B18 /* IMChartTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartTimeLineView.h; sourceTree = "<group>"; };
-		B75111E520A1970700D93B18 /* IMChartTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartTimeLineView.m; sourceTree = "<group>"; };
-		B75111E720A1970700D93B18 /* IMBothColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMBothColumnChartView.h; sourceTree = "<group>"; };
-		B75111E820A1970700D93B18 /* IMBothColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMBothColumnChartView.m; sourceTree = "<group>"; };
-		B75111EA20A1970700D93B18 /* IMTrendColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTrendColumnChartView.h; sourceTree = "<group>"; };
-		B75111EC20A1970700D93B18 /* IMTrendColumnChartPainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTrendColumnChartPainer.m; sourceTree = "<group>"; };
-		B75111ED20A1970700D93B18 /* IMTrendColumnChartPainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTrendColumnChartPainer.h; sourceTree = "<group>"; };
-		B75111EE20A1970700D93B18 /* IMTrendColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTrendColumnChartView.m; sourceTree = "<group>"; };
-		B75111F020A1970700D93B18 /* IMChartChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartChooseView.h; sourceTree = "<group>"; };
-		B75111F120A1970700D93B18 /* IMChartChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartChooseView.m; sourceTree = "<group>"; };
+		B70796D520EF676200195A65 /* IMChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChart.h; sourceTree = "<group>"; };
+		B70796D720EF676200195A65 /* IMChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartData.m; sourceTree = "<group>"; };
+		B70796D820EF676200195A65 /* IMChartPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartPoint.m; sourceTree = "<group>"; };
+		B70796D920EF676200195A65 /* IMChartDataGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartDataGroup.m; sourceTree = "<group>"; };
+		B70796DA20EF676200195A65 /* IMChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartData.h; sourceTree = "<group>"; };
+		B70796DB20EF676200195A65 /* IMChartPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartPoint.h; sourceTree = "<group>"; };
+		B70796DC20EF676200195A65 /* IMChartDataGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartDataGroup.h; sourceTree = "<group>"; };
+		B70796DF20EF676200195A65 /* IMChartRightTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartRightTipView.h; sourceTree = "<group>"; };
+		B70796E020EF676200195A65 /* IMChartRightTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartRightTipView.m; sourceTree = "<group>"; };
+		B70796E220EF676200195A65 /* IMLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMLineChartView.h; sourceTree = "<group>"; };
+		B70796E420EF676200195A65 /* IMSmoothedLineChartPainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSmoothedLineChartPainer.h; sourceTree = "<group>"; };
+		B70796E520EF676200195A65 /* IMSmoothedLineChartPainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSmoothedLineChartPainer.m; sourceTree = "<group>"; };
+		B70796E620EF676200195A65 /* IMLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMLineChartView.m; sourceTree = "<group>"; };
+		B70796E820EF676200195A65 /* IMChartScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartScrollView.h; sourceTree = "<group>"; };
+		B70796E920EF676200195A65 /* IMChartScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartScrollView.m; sourceTree = "<group>"; };
+		B70796EB20EF676200195A65 /* IMColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMColumnChartView.m; sourceTree = "<group>"; };
+		B70796EC20EF676200195A65 /* IMColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMColumnChartView.h; sourceTree = "<group>"; };
+		B70796EE20EF676200195A65 /* IMChartTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartTimeLineView.h; sourceTree = "<group>"; };
+		B70796EF20EF676200195A65 /* IMChartTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartTimeLineView.m; sourceTree = "<group>"; };
+		B70796F120EF676200195A65 /* IMBothColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMBothColumnChartView.h; sourceTree = "<group>"; };
+		B70796F220EF676200195A65 /* IMBothColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMBothColumnChartView.m; sourceTree = "<group>"; };
+		B70796F420EF676200195A65 /* IMTrendColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTrendColumnChartView.h; sourceTree = "<group>"; };
+		B70796F620EF676200195A65 /* IMTrendColumnChartPainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTrendColumnChartPainer.m; sourceTree = "<group>"; };
+		B70796F720EF676200195A65 /* IMTrendColumnChartPainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTrendColumnChartPainer.h; sourceTree = "<group>"; };
+		B70796F820EF676200195A65 /* IMTrendColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTrendColumnChartView.m; sourceTree = "<group>"; };
+		B70796FA20EF676200195A65 /* IMChartChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMChartChooseView.h; sourceTree = "<group>"; };
+		B70796FB20EF676200195A65 /* IMChartChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartChooseView.m; sourceTree = "<group>"; };
 		B76276D720871F500033BD8E /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
 		B76276D820871F500033BD8E /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 		B7A5BD2720846F390033D998 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,133 +125,133 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B75111CA20A1970700D93B18 /* IMChart */ = {
+		B70796D420EF676200195A65 /* IMChart */ = {
 			isa = PBXGroup;
 			children = (
-				B75111CB20A1970700D93B18 /* IMChart.h */,
-				B75111CC20A1970700D93B18 /* M */,
-				B75111D320A1970700D93B18 /* V */,
+				B70796D520EF676200195A65 /* IMChart.h */,
+				B70796D620EF676200195A65 /* M */,
+				B70796DD20EF676200195A65 /* V */,
 			);
 			name = IMChart;
 			path = ../../IMChart;
 			sourceTree = "<group>";
 		};
-		B75111CC20A1970700D93B18 /* M */ = {
+		B70796D620EF676200195A65 /* M */ = {
 			isa = PBXGroup;
 			children = (
-				B75111CD20A1970700D93B18 /* IMChartData.m */,
-				B75111CE20A1970700D93B18 /* IMChartPoint.m */,
-				B75111CF20A1970700D93B18 /* IMChartDataGroup.m */,
-				B75111D020A1970700D93B18 /* IMChartData.h */,
-				B75111D120A1970700D93B18 /* IMChartPoint.h */,
-				B75111D220A1970700D93B18 /* IMChartDataGroup.h */,
+				B70796D720EF676200195A65 /* IMChartData.m */,
+				B70796D820EF676200195A65 /* IMChartPoint.m */,
+				B70796D920EF676200195A65 /* IMChartDataGroup.m */,
+				B70796DA20EF676200195A65 /* IMChartData.h */,
+				B70796DB20EF676200195A65 /* IMChartPoint.h */,
+				B70796DC20EF676200195A65 /* IMChartDataGroup.h */,
 			);
 			path = M;
 			sourceTree = "<group>";
 		};
-		B75111D320A1970700D93B18 /* V */ = {
+		B70796DD20EF676200195A65 /* V */ = {
 			isa = PBXGroup;
 			children = (
-				B75111D420A1970700D93B18 /* RightTipView */,
-				B75111D720A1970700D93B18 /* LineChartView */,
-				B75111DD20A1970700D93B18 /* ChartScrollView */,
-				B75111E020A1970700D93B18 /* ColumnChartView */,
-				B75111E320A1970700D93B18 /* TimeLineView */,
-				B75111E620A1970700D93B18 /* BothColumnChartView */,
-				B75111E920A1970700D93B18 /* TrendColumnChartView */,
-				B75111EF20A1970700D93B18 /* ChooseView */,
+				B70796DE20EF676200195A65 /* RightTipView */,
+				B70796E120EF676200195A65 /* LineChartView */,
+				B70796E720EF676200195A65 /* ChartScrollView */,
+				B70796EA20EF676200195A65 /* ColumnChartView */,
+				B70796ED20EF676200195A65 /* TimeLineView */,
+				B70796F020EF676200195A65 /* BothColumnChartView */,
+				B70796F320EF676200195A65 /* TrendColumnChartView */,
+				B70796F920EF676200195A65 /* ChooseView */,
 			);
 			path = V;
 			sourceTree = "<group>";
 		};
-		B75111D420A1970700D93B18 /* RightTipView */ = {
+		B70796DE20EF676200195A65 /* RightTipView */ = {
 			isa = PBXGroup;
 			children = (
-				B75111D520A1970700D93B18 /* IMChartRightTipView.h */,
-				B75111D620A1970700D93B18 /* IMChartRightTipView.m */,
+				B70796DF20EF676200195A65 /* IMChartRightTipView.h */,
+				B70796E020EF676200195A65 /* IMChartRightTipView.m */,
 			);
 			path = RightTipView;
 			sourceTree = "<group>";
 		};
-		B75111D720A1970700D93B18 /* LineChartView */ = {
+		B70796E120EF676200195A65 /* LineChartView */ = {
 			isa = PBXGroup;
 			children = (
-				B75111D820A1970700D93B18 /* IMLineChartView.h */,
-				B75111D920A1970700D93B18 /* Painer */,
-				B75111DC20A1970700D93B18 /* IMLineChartView.m */,
+				B70796E220EF676200195A65 /* IMLineChartView.h */,
+				B70796E320EF676200195A65 /* Painer */,
+				B70796E620EF676200195A65 /* IMLineChartView.m */,
 			);
 			path = LineChartView;
 			sourceTree = "<group>";
 		};
-		B75111D920A1970700D93B18 /* Painer */ = {
+		B70796E320EF676200195A65 /* Painer */ = {
 			isa = PBXGroup;
 			children = (
-				B75111DA20A1970700D93B18 /* IMSmoothedLineChartPainer.h */,
-				B75111DB20A1970700D93B18 /* IMSmoothedLineChartPainer.m */,
+				B70796E420EF676200195A65 /* IMSmoothedLineChartPainer.h */,
+				B70796E520EF676200195A65 /* IMSmoothedLineChartPainer.m */,
 			);
 			path = Painer;
 			sourceTree = "<group>";
 		};
-		B75111DD20A1970700D93B18 /* ChartScrollView */ = {
+		B70796E720EF676200195A65 /* ChartScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				B75111DE20A1970700D93B18 /* IMChartScrollView.h */,
-				B75111DF20A1970700D93B18 /* IMChartScrollView.m */,
+				B70796E820EF676200195A65 /* IMChartScrollView.h */,
+				B70796E920EF676200195A65 /* IMChartScrollView.m */,
 			);
 			path = ChartScrollView;
 			sourceTree = "<group>";
 		};
-		B75111E020A1970700D93B18 /* ColumnChartView */ = {
+		B70796EA20EF676200195A65 /* ColumnChartView */ = {
 			isa = PBXGroup;
 			children = (
-				B75111E120A1970700D93B18 /* IMColumnChartView.m */,
-				B75111E220A1970700D93B18 /* IMColumnChartView.h */,
+				B70796EB20EF676200195A65 /* IMColumnChartView.m */,
+				B70796EC20EF676200195A65 /* IMColumnChartView.h */,
 			);
 			path = ColumnChartView;
 			sourceTree = "<group>";
 		};
-		B75111E320A1970700D93B18 /* TimeLineView */ = {
+		B70796ED20EF676200195A65 /* TimeLineView */ = {
 			isa = PBXGroup;
 			children = (
-				B75111E420A1970700D93B18 /* IMChartTimeLineView.h */,
-				B75111E520A1970700D93B18 /* IMChartTimeLineView.m */,
+				B70796EE20EF676200195A65 /* IMChartTimeLineView.h */,
+				B70796EF20EF676200195A65 /* IMChartTimeLineView.m */,
 			);
 			path = TimeLineView;
 			sourceTree = "<group>";
 		};
-		B75111E620A1970700D93B18 /* BothColumnChartView */ = {
+		B70796F020EF676200195A65 /* BothColumnChartView */ = {
 			isa = PBXGroup;
 			children = (
-				B75111E720A1970700D93B18 /* IMBothColumnChartView.h */,
-				B75111E820A1970700D93B18 /* IMBothColumnChartView.m */,
+				B70796F120EF676200195A65 /* IMBothColumnChartView.h */,
+				B70796F220EF676200195A65 /* IMBothColumnChartView.m */,
 			);
 			path = BothColumnChartView;
 			sourceTree = "<group>";
 		};
-		B75111E920A1970700D93B18 /* TrendColumnChartView */ = {
+		B70796F320EF676200195A65 /* TrendColumnChartView */ = {
 			isa = PBXGroup;
 			children = (
-				B75111EA20A1970700D93B18 /* IMTrendColumnChartView.h */,
-				B75111EB20A1970700D93B18 /* Painer */,
-				B75111EE20A1970700D93B18 /* IMTrendColumnChartView.m */,
+				B70796F420EF676200195A65 /* IMTrendColumnChartView.h */,
+				B70796F520EF676200195A65 /* Painer */,
+				B70796F820EF676200195A65 /* IMTrendColumnChartView.m */,
 			);
 			path = TrendColumnChartView;
 			sourceTree = "<group>";
 		};
-		B75111EB20A1970700D93B18 /* Painer */ = {
+		B70796F520EF676200195A65 /* Painer */ = {
 			isa = PBXGroup;
 			children = (
-				B75111EC20A1970700D93B18 /* IMTrendColumnChartPainer.m */,
-				B75111ED20A1970700D93B18 /* IMTrendColumnChartPainer.h */,
+				B70796F620EF676200195A65 /* IMTrendColumnChartPainer.m */,
+				B70796F720EF676200195A65 /* IMTrendColumnChartPainer.h */,
 			);
 			path = Painer;
 			sourceTree = "<group>";
 		};
-		B75111EF20A1970700D93B18 /* ChooseView */ = {
+		B70796F920EF676200195A65 /* ChooseView */ = {
 			isa = PBXGroup;
 			children = (
-				B75111F020A1970700D93B18 /* IMChartChooseView.h */,
-				B75111F120A1970700D93B18 /* IMChartChooseView.m */,
+				B70796FA20EF676200195A65 /* IMChartChooseView.h */,
+				B70796FB20EF676200195A65 /* IMChartChooseView.m */,
 			);
 			path = ChooseView;
 			sourceTree = "<group>";
@@ -259,7 +259,7 @@
 		B7A5BD2620846F390033D998 /* IMChartDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B75111CA20A1970700D93B18 /* IMChart */,
+				B70796D420EF676200195A65 /* IMChart */,
 				B7A5BD2820846F390033D998 /* Extension */,
 				B7A5BD2D20846F390033D998 /* Resources */,
 				B7A5BD3F20846F390033D998 /* ViewController.h */,
@@ -468,24 +468,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B75111FB20A1970700D93B18 /* IMBothColumnChartView.m in Sources */,
-				B75111F220A1970700D93B18 /* IMChartData.m in Sources */,
+				B707970520EF676200195A65 /* IMBothColumnChartView.m in Sources */,
+				B70796FC20EF676200195A65 /* IMChartData.m in Sources */,
 				B7A5BD4B20846F390033D998 /* ViewController.m in Sources */,
 				B7A5BD4120846F390033D998 /* IMChartData+Parse.m in Sources */,
-				B75111FC20A1970700D93B18 /* IMTrendColumnChartPainer.m in Sources */,
-				B75111F720A1970700D93B18 /* IMLineChartView.m in Sources */,
-				B75111F320A1970700D93B18 /* IMChartPoint.m in Sources */,
-				B75111FA20A1970700D93B18 /* IMChartTimeLineView.m in Sources */,
+				B707970620EF676200195A65 /* IMTrendColumnChartPainer.m in Sources */,
+				B707970120EF676200195A65 /* IMLineChartView.m in Sources */,
+				B70796FD20EF676200195A65 /* IMChartPoint.m in Sources */,
+				B707970420EF676200195A65 /* IMChartTimeLineView.m in Sources */,
 				B7A5BD4D20846F390033D998 /* main.m in Sources */,
 				B7A5BD4020846F390033D998 /* UIView+IMRect.m in Sources */,
 				B76276D920871F500033BD8E /* ViewController1.m in Sources */,
-				B75111FE20A1970700D93B18 /* IMChartChooseView.m in Sources */,
-				B75111F820A1970700D93B18 /* IMChartScrollView.m in Sources */,
-				B75111F620A1970700D93B18 /* IMSmoothedLineChartPainer.m in Sources */,
-				B75111F420A1970700D93B18 /* IMChartDataGroup.m in Sources */,
-				B75111F920A1970700D93B18 /* IMColumnChartView.m in Sources */,
-				B75111FD20A1970700D93B18 /* IMTrendColumnChartView.m in Sources */,
-				B75111F520A1970700D93B18 /* IMChartRightTipView.m in Sources */,
+				B707970820EF676200195A65 /* IMChartChooseView.m in Sources */,
+				B707970220EF676200195A65 /* IMChartScrollView.m in Sources */,
+				B707970020EF676200195A65 /* IMSmoothedLineChartPainer.m in Sources */,
+				B70796FE20EF676200195A65 /* IMChartDataGroup.m in Sources */,
+				B707970320EF676200195A65 /* IMColumnChartView.m in Sources */,
+				B707970720EF676200195A65 /* IMTrendColumnChartView.m in Sources */,
+				B70796FF20EF676200195A65 /* IMChartRightTipView.m in Sources */,
 				B7A5BD4E20846F390033D998 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
