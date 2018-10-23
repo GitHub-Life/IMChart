@@ -101,8 +101,8 @@ typedef void(^BeginGrBlock)(void);
         [self.contentView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(width);
         }];
-        self.lineChartView.width = width;
-        self.columnChartView.width = width;
+        self.lineChartView.im_width = width;
+        self.columnChartView.im_width = width;
     }];
     [RACObserve(self, drawAreaWidth) subscribeNext:^(NSNumber *x) {
         CGFloat drawAreaWidth = [x doubleValue];

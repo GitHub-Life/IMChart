@@ -18,4 +18,16 @@
     return self;
 }
 
++ (instancetype)dataWithLineValues:(NSArray<NSNumber *> *)lineValues {
+    IMChartData *data = [[IMChartData alloc] init];
+    data.lineValues = lineValues;
+    return data;
+}
+
++ (instancetype)dataWithLineValue:(NSNumber *)lineValue {
+    IMChartData *data = [[IMChartData alloc] init];
+    data.lineValues = @[lineValue];
+    return data;
+}
+
 @end

@@ -78,6 +78,8 @@
 //    }];
     
     _showStates = @[@1,@1,@1,@1];
+    self.lineChartView.drawAnimation = YES;
+    self.lineChartView.gradientFill = YES;
     [self.lineChartView setLineColors:[self.chartColors subarrayWithRange:NSMakeRange(0, 3)]];
     [self.columnChartView setColumnColor:[self.chartColors lastObject]];
     

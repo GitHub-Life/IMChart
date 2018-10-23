@@ -24,8 +24,8 @@
 
 @implementation IMLineChartView
 
-- (instancetype)init {
-    if (self = [super init]) {
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
         [self initSetting];
     }
     return self;
@@ -49,13 +49,9 @@
     _lineShowStates = @[@1];
     _dataGroup = [[IMChartDataGroup alloc] init];
     @weakify(self);
-    [[RACSignal combineLatest:@[RACObserve(self.dataGroup, dataArray), RACObserve(self, lineShowStates)] reduce:^id{
-        return @1;
-    }] subscribeNext:^(id x) {
+    [[RACSignal combineLatest:@[RACObserve(self.dataGroup, dataArray), RACObserve(self, lineShowStates)]] subscribeNext:^(id x) {
         @strongify(self);
-        if ([x boolValue]) {
-            [self draw];
-        }
+        [self draw];
     }];
     [RACObserve(self, drawBeginOffsetX) subscribeNext:^(id x) {
         @strongify(self);
@@ -95,8 +91,37 @@
     
     CGContextSetLineWidth(context, _lineWidth);
     if (_smoothed) {
-        [[[IMSmoothedLineChartPainer alloc] init] drawWithDataArray:_drawDataArray context:context lineColors:_lineColors lineShowStates:_lineShowStates];
+        IMSmoothedLineChartPainer *painer = [[IMSmoothedLineChartPainer alloc] init];
+        painer.gradientFill = _gradientFill;
+        painer.drawSize = rect.size;
+        [painer drawWithDataArray:_drawDataArray context:context lineColors:_lineColors lineShowStates:_lineShowStates];
     }
+    
+    if (_drawAnimation) {
+        [self addAnimation];
+    }
+}
+
+#pragma mark - 添加绘制动画
+- (void)addAnimation {
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.strokeColor = [UIColor whiteColor].CGColor;
+    maskLayer.fillColor = [UIColor clearColor].CGColor;
+    maskLayer.lineWidth = CGRectGetHeight(self.bounds);
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(0, CGRectGetHeight(self.bounds) / 2)];
+    [path addLineToPoint:CGPointMake(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) / 2)];
+    maskLayer.path = path.CGPath;
+    self.layer.mask = maskLayer;
+    
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    anim.duration = 1;
+    anim.fromValue = @(0);
+    anim.toValue = @(1);
+    anim.removedOnCompletion = NO;
+    anim.fillMode = kCAFillModeForwards;
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [maskLayer addAnimation:anim forKey:@"strokeEnd"];
 }
 
 - (void)draw {
@@ -124,7 +149,7 @@
     if (beginIndex > endIndex) {
         beginIndex = 0;
     }
-    _drawDataArray = [_dataGroup.dataArray subarrayWithRange:NSMakeRange(beginIndex, endIndex - beginIndex)];
+    _drawDataArray = [_dataGroup.dataArray subarrayWithRange:NSMakeRange(beginIndex, endIndex - beginIndex + 1)];
     
     NSMutableArray<NSNumber *> *timeStamps = [NSMutableArray array];
     NSMutableArray<NSNumber *> *maxValues = _drawDataArray.firstObject.lineValues.mutableCopy;
@@ -191,9 +216,9 @@
         return unitX;
     }
     if (_dataGroup.dataArray.count > 1) {
-        unitX = self.width / (_dataGroup.dataArray.count - 1);
+        unitX = self.im_width / (_dataGroup.dataArray.count - 1);
     } else {
-        unitX = self.width;
+        unitX = self.im_width;
     }
     // 得出手势中心点在绘制区域中的相对位置
     CGFloat pinCenterXoffset = pinCenterX - _drawBeginOffsetX;
@@ -203,8 +228,8 @@
     CGFloat newPinCenterX = pinCenterIndex * unitX;
     if (newPinCenterX < pinCenterXoffset) {
         return 0;
-    } else if (self.width - _drawBeginOffsetX < _drawAreaWidth) {
-        return self.width - _drawAreaWidth;
+    } else if (self.im_width - _drawBeginOffsetX < _drawAreaWidth) {
+        return self.im_width - _drawAreaWidth;
     }
     return newPinCenterX - pinCenterXoffset;
 }

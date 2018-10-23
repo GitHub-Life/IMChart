@@ -11,6 +11,10 @@
 
 @interface IMSmoothedLineChartPainer : NSObject
 
+@property (nonatomic, assign) BOOL gradientFill;
+
+@property (nonatomic, assign) CGSize drawSize;
+
 - (void)drawWithDataArray:(NSArray<IMChartData *> *)dataArray context:(CGContextRef)context lineColors:(NSArray<UIColor *> *)lineColors lineShowStates:(NSArray<NSNumber *> *)lineShowStates;
 
 @end

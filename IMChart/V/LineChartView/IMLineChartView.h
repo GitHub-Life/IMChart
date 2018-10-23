@@ -24,6 +24,10 @@
 @property (nonatomic, assign) BOOL yStartZero;
 /** 是否画贝塞尔曲线 还是 折线 */
 @property (nonatomic, assign) BOOL smoothed;
+/** 是否渐变填充 */
+@property (nonatomic, assign) BOOL gradientFill;
+/** 是否动画绘制 */
+@property (nonatomic, assign) BOOL drawAnimation;
 
 /** 显示的线的状态集合 0:不显示，非零显示; 数组为nil或empty则不显示 */
 @property (nonatomic, strong) NSArray<NSNumber *> *lineShowStates;

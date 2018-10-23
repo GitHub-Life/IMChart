@@ -21,7 +21,7 @@
 		B707970720EF676200195A65 /* IMTrendColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796F820EF676200195A65 /* IMTrendColumnChartView.m */; };
 		B707970820EF676200195A65 /* IMChartChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70796FB20EF676200195A65 /* IMChartChooseView.m */; };
 		B76276D920871F500033BD8E /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = B76276D820871F500033BD8E /* ViewController1.m */; };
-		B7A5BD4020846F390033D998 /* UIView+IMRect.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD2920846F390033D998 /* UIView+IMRect.m */; };
+		B7698539217F277700343D51 /* UIView+IMRect.m in Sources */ = {isa = PBXBuildFile; fileRef = B7698538217F277700343D51 /* UIView+IMRect.m */; };
 		B7A5BD4120846F390033D998 /* IMChartData+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD2C20846F390033D998 /* IMChartData+Parse.m */; };
 		B7A5BD4220846F390033D998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD2E20846F390033D998 /* Assets.xcassets */; };
 		B7A5BD4320846F390033D998 /* 3m.json in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3020846F390033D998 /* 3m.json */; };
@@ -36,7 +36,6 @@
 		B7A5BD4C20846F390033D998 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3A20846F390033D998 /* Main.storyboard */; };
 		B7A5BD4D20846F390033D998 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD3C20846F390033D998 /* main.m */; };
 		B7A5BD4E20846F390033D998 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A5BD3D20846F390033D998 /* AppDelegate.m */; };
-		B7A5BD4F20846F390033D998 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7A5BD3E20846F390033D998 /* Info.plist */; };
 		CBF6101F0C98ACD3372923BB /* Pods_IMChartDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8182CEF7DAE0360C2D67E3 /* Pods_IMChartDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,10 +72,10 @@
 		B70796FB20EF676200195A65 /* IMChartChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMChartChooseView.m; sourceTree = "<group>"; };
 		B76276D720871F500033BD8E /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
 		B76276D820871F500033BD8E /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
+		B7698537217F277600343D51 /* UIView+IMRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IMRect.h"; sourceTree = "<group>"; };
+		B7698538217F277700343D51 /* UIView+IMRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IMRect.m"; sourceTree = "<group>"; };
 		B7A5BD2720846F390033D998 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B7A5BD2920846F390033D998 /* UIView+IMRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IMRect.m"; sourceTree = "<group>"; };
 		B7A5BD2A20846F390033D998 /* IMChartData+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IMChartData+Parse.h"; sourceTree = "<group>"; };
-		B7A5BD2B20846F390033D998 /* UIView+IMRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IMRect.h"; sourceTree = "<group>"; };
 		B7A5BD2C20846F390033D998 /* IMChartData+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IMChartData+Parse.m"; sourceTree = "<group>"; };
 		B7A5BD2E20846F390033D998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7A5BD3020846F390033D998 /* 3m.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 3m.json; sourceTree = "<group>"; };
@@ -274,9 +273,9 @@
 		B7A5BD2820846F390033D998 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				B7A5BD2920846F390033D998 /* UIView+IMRect.m */,
+				B7698537217F277600343D51 /* UIView+IMRect.h */,
+				B7698538217F277700343D51 /* UIView+IMRect.m */,
 				B7A5BD2A20846F390033D998 /* IMChartData+Parse.h */,
-				B7A5BD2B20846F390033D998 /* UIView+IMRect.h */,
 				B7A5BD2C20846F390033D998 /* IMChartData+Parse.m */,
 			);
 			path = Extension;
@@ -397,7 +396,6 @@
 				B7A5BD4520846F390033D998 /* 1y.json in Resources */,
 				B7A5BD4220846F390033D998 /* Assets.xcassets in Resources */,
 				B7A5BD4620846F390033D998 /* ytd.json in Resources */,
-				B7A5BD4F20846F390033D998 /* Info.plist in Resources */,
 				B7A5BD4820846F390033D998 /* 1d.json in Resources */,
 				B7A5BD4320846F390033D998 /* 3m.json in Resources */,
 			);
@@ -472,12 +470,12 @@
 				B70796FC20EF676200195A65 /* IMChartData.m in Sources */,
 				B7A5BD4B20846F390033D998 /* ViewController.m in Sources */,
 				B7A5BD4120846F390033D998 /* IMChartData+Parse.m in Sources */,
+				B7698539217F277700343D51 /* UIView+IMRect.m in Sources */,
 				B707970620EF676200195A65 /* IMTrendColumnChartPainer.m in Sources */,
 				B707970120EF676200195A65 /* IMLineChartView.m in Sources */,
 				B70796FD20EF676200195A65 /* IMChartPoint.m in Sources */,
 				B707970420EF676200195A65 /* IMChartTimeLineView.m in Sources */,
 				B7A5BD4D20846F390033D998 /* main.m in Sources */,
-				B7A5BD4020846F390033D998 /* UIView+IMRect.m in Sources */,
 				B76276D920871F500033BD8E /* ViewController1.m in Sources */,
 				B707970820EF676200195A65 /* IMChartChooseView.m in Sources */,
 				B707970220EF676200195A65 /* IMChartScrollView.m in Sources */,

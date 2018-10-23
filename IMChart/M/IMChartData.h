@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class IMChartPoint;
+#import "IMChartPoint.h"
 
 @interface IMChartData : NSObject
 
@@ -25,5 +25,8 @@
 
 - (instancetype)initWithColumnValue:(NSNumber *)columnValue
                           timeStamp:(NSTimeInterval)timeStamp;
+
++ (instancetype)dataWithLineValues:(NSArray<NSNumber *> *)lineValues;
++ (instancetype)dataWithLineValue:(NSNumber *)lineValue;
 
 @end

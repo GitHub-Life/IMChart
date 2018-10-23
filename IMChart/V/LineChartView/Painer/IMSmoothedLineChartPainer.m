@@ -23,17 +23,30 @@
         [points addObject:subPoints];
     }
     
-    CGContextBeginPath(context);
     for (int i = 0; i < lineQty; i++) {
         if (![lineShowStates[i] boolValue]) {
             continue;
         }
         UIBezierPath *curvedPath = [self curvedPathWithPoints:points[i]];
-        CGContextSetStrokeColorWithColor(context, lineColors[i].CGColor);
-        CGContextAddPath(context, curvedPath.CGPath);
-        CGContextDrawPath(context, kCGPathStroke);
+        [lineColors[i] setStroke];
+        [curvedPath stroke];
+        if (_gradientFill) {
+            [curvedPath addLineToPoint:CGPointMake(dataArray.lastObject.linePoints[i].cgPoint.x, _drawSize.height)];
+            [curvedPath addLineToPoint:CGPointMake(dataArray.firstObject.linePoints[i].cgPoint.x, _drawSize.height)];
+            [curvedPath closePath];
+            
+            CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+            CGFloat locations[] = {0.f, 1.f};
+            NSArray *colors = @[(__bridge id)[lineColors[i] colorWithAlphaComponent:0.1f].CGColor, (__bridge id)[lineColors[i] colorWithAlphaComponent:0.f].CGColor];
+            CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)colors, locations);
+            CGContextSaveGState(context);
+            CGContextAddPath(context, curvedPath.CGPath);
+            CGContextClip(context);
+            CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(0, _drawSize.height), kCGGradientDrawsBeforeStartLocation);
+            CGGradientRelease(gradient);
+            CGColorSpaceRelease(colorSpace);
+        }
     }
-    CGContextStrokePath(context);
 }
 
 - (UIBezierPath *)curvedPathWithPoints:(NSArray<IMChartPoint *> *)points {

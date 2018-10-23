@@ -1,101 +1,97 @@
 //
 //  UIView+IMRect.m
-//  NiuYan
+//  IMPieChartDemo
 //
-//  Created by 万涛 on 2018/3/15.
-//  Copyright © 2018年 niuyan.com. All rights reserved.
+//  Created by 万涛 on 2018/4/21.
+//  Copyright © 2018年 iMoon. All rights reserved.
 //
 
 #import "UIView+IMRect.h"
 
-@implementation UIView (Rect)
+@implementation UIView (IMRect)
 
--(void)setX:(CGFloat)x
-{
+-(void)setIm_x:(CGFloat)im_x {
     CGRect frame = self.frame;
-    frame.origin.x = x;
+    frame.origin.x = im_x;
     self.frame = frame;
 }
 
--(CGFloat)x
-{
+-(CGFloat)im_x {
     return CGRectGetMinX(self.frame);
 }
 
--(void)setY:(CGFloat)y
-{
+-(void)setIm_y:(CGFloat)im_y {
     CGRect frame = self.frame;
-    frame.origin.y = y;
+    frame.origin.y = im_y;
     self.frame = frame;
 }
 
--(CGFloat)y
-{
+-(CGFloat)im_y {
     return CGRectGetMinY(self.frame);
 }
 
--(void)setWidth:(CGFloat)width
-{
+-(void)setIm_width:(CGFloat)im_width {
     CGRect frame = self.frame;
-    frame.size.width = width;
+    frame.size.width = im_width;
     self.frame = frame;
 }
 
--(CGFloat)width
-{
+-(CGFloat)im_width {
     return CGRectGetWidth(self.frame);
 }
 
--(void)setHeight:(CGFloat)height
-{
+-(void)setIm_height:(CGFloat)im_height {
     CGRect frame = self.frame;
-    frame.size.height = height;
+    frame.size.height = im_height;
     self.frame = frame;
 }
 
--(CGFloat)height {
+-(CGFloat)im_height {
     return CGRectGetHeight(self.frame);
 }
 
--(void)setSize:(CGSize)size {
+-(void)setIm_size:(CGSize)im_size {
     CGRect frame = self.frame;
-    frame.size = size;
+    frame.size = im_size;
     self.frame = frame;
 }
 
--(CGSize)size {
+-(CGSize)im_size {
     return self.frame.size;
 }
 
--(void)setOrigin:(CGPoint)origin {
+-(void)setIm_origin:(CGPoint)im_origin {
     CGRect frame = self.frame;
-    frame.origin = origin;
+    frame.origin = im_origin;
     self.frame = frame;
 }
 
--(CGPoint)origin {
+-(CGPoint)im_origin {
     return self.frame.origin;
 }
 
--(void)setCenterX:(CGFloat)centerX {
+-(void)setIm_centerX:(CGFloat)im_centerX {
     CGPoint center = self.center;
-    center.x = centerX;
+    center.x = im_centerX;
     self.center = center;
 }
 
--(CGFloat)centerX {
+-(CGFloat)im_centerX {
     return CGRectGetMidX(self.frame);
 }
 
--(void)setCenterY:(CGFloat)centerY
-{
+-(void)setIm_centerY:(CGFloat)im_centerY {
     CGPoint center = self.center;
-    center.y = centerY;
+    center.y = im_centerY;
     self.center = center;
 }
 
--(CGFloat)centerY {
+-(CGFloat)im_centerY {
     return CGRectGetMidY(self.frame);
+}
+
+- (CGPoint)im_centerSelf {
+    return CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
 }
 
 @end
